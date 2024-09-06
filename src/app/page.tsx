@@ -1,3 +1,11 @@
+import Banner from "@/components/Banner";
+import Categories from "@/components/Categories";
+
 export default function Home() {
-  return <h1>hello world</h1>;
+  return (
+    <>
+      <Banner></Banner>
+      <Categories></Categories>
+    </>
+  );
 }
