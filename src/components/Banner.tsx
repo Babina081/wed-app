@@ -1,7 +1,36 @@
-import React from "react";
+"use client";
+import React, { useState } from "react";
 import Heading from "./Heading";
+import { eventCompanies } from "@/utils/data";
+import Button from "./Button";
+import { useRouter } from "next/navigation";
 
 const Banner = () => {
+  const router = useRouter(); // Initialize useRouter hook
+  // Extract unique categories and locations for dropdowns
+  const categories = Array.from(
+    new Set(eventCompanies.map((company) => company.category))
+  );
+  const locations = Array.from(
+    new Set(eventCompanies.map((company) => company.location))
+  );
+
+  // Initialize state with the first item from the arrays, if available
+  const [selectedCategory, setSelectedCategory] = useState(categories[0] || "");
+  const [selectedLocation, setSelectedLocation] = useState(locations[0] || "");
+
+  // Handle search button click
+  const handleSearch = () => {
+    // Redirect to the desired URL
+    router.push(
+      `/services/${selectedCategory
+        .toLowerCase()
+        .replace(/ /g, "-")}/${selectedLocation
+        .toLowerCase()
+        .replace(/ /g, "-")}`
+    );
+  };
+
   return (
     <section
       className="bg-purple-200 h-[60vh] py-4
@@ -12,7 +41,32 @@ const Banner = () => {
         Discover the best photographers, videographers, boutiques, make-up
         artists, event planners and more
       </p>
-      {/* input search */}
+      {/* Search bar */}
+      <div className="mt-4 flex gap-2">
+        <select
+          value={selectedCategory}
+          onChange={(e) => setSelectedCategory(e.target.value)}
+          className="border p-2 rounded-lg mr-2"
+        >
+          {categories.map((category) => (
+            <option key={category} value={category}>
+              {category}
+            </option>
+          ))}
+        </select>
+        <select
+          value={selectedLocation}
+          onChange={(e) => setSelectedLocation(e.target.value)}
+          className="border p-2 rounded-lg"
+        >
+          {locations.map((location) => (
+            <option key={location} value={location}>
+              {location}
+            </option>
+          ))}
+        </select>
+        <Button onClick={handleSearch}>Search</Button>
+      </div>
     </section>
   );
 };
