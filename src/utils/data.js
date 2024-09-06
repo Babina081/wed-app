@@ -7,6 +7,8 @@ import {
   FaSmile,
 } from "react-icons/fa"; // Example icons from react-icons
 
+import { FaFacebook, FaTwitter, FaInstagram, FaLinkedin } from "react-icons/fa";
+
 export const eventServices = [
   {
     name: "Photographers",
@@ -95,4 +97,11 @@ export const spotlightServices = [
     image: "https://picsum.photos/300/200?random=4",
     rank: 4,
   },
+];
+
+export const socialMediaLinks = [
+  { platform: "Facebook", icon: FaFacebook, url: "https://facebook.com" },
+  { platform: "Twitter", icon: FaTwitter, url: "https://twitter.com" },
+  { platform: "Instagram", icon: FaInstagram, url: "https://instagram.com" },
+  { platform: "LinkedIn", icon: FaLinkedin, url: "https://linkedin.com" },
 ];
