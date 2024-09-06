@@ -158,3 +158,183 @@ export const eventCompanies = [
     location: "Butwal",
   },
 ];
+
+export const eventCompaniesDetails = [
+  {
+    name: "LensCraft Studios",
+    category: "Photographers",
+    description:
+      "Weddings are special. Of all the days in your life, your wedding day is the day that symbolizes new beginnings. A day that promises fresh start and sweet love. A day which joins you to a different person, a different family and a whole new life. A day where joyous celebrations and misty farewells go hand in hand. A day just for you and your beloved. We genuinely believe in making this day special for you.We are committed to make our client's day the most memorable one with what we know best. Wedding photography and videography services at a best price. For the past few years, we have been a part of many marriages, capturing your special moments and smiles. And it is the love and affection from our past and present clients that make us Nepal’s most favored Premium Wedding Photography and Videography Company. More than a company, we are a group of young minds who believe in giving all our efforts into making your wedding: A Dream That Came True.",
+    reviews: [
+      {
+        user: "John Doe",
+        comment: "Amazing work! Captured our wedding perfectly.",
+        rating: 5,
+      },
+      {
+        user: "Jane Smith",
+        comment: "Professional and creative team. Highly recommend!",
+        rating: 4.8,
+      },
+    ],
+    isFav: true,
+    missionDescription:
+      "To capture life's most cherished moments with creativity and precision.",
+    services: ["Wedding Photography", "Cinematography", "Photoshoot Packages"],
+    images: [
+      "/images/lenscraft-1.jpg",
+      "/images/lenscraft-2.jpg",
+      "/images/lenscraft-3.jpg",
+    ],
+    location: "Pokhara",
+    website: "https://lenscraftstudios.com",
+    email: "info@lenscraftstudios.com",
+    phoneNumber: "+977-9800000001",
+    socials: {
+      facebook: "https://facebook.com/lenscraftstudios",
+      instagram: "https://instagram.com/lenscraftstudios",
+    },
+  },
+  {
+    name: "MotionFrame Films",
+    category: "Videographers",
+    description:
+      "MotionFrame Films specializes in cinematic wedding videos, event highlights, and promotional films. Our team delivers visually stunning and emotionally moving content.",
+    reviews: [
+      {
+        user: "Emily Clark",
+        comment:
+          "The cinematography was breathtaking. We relive our wedding every time we watch it.",
+        rating: 5,
+      },
+      {
+        user: "Michael Lee",
+        comment:
+          "Excellent attention to detail and story. Highly professional.",
+        rating: 4.9,
+      },
+    ],
+    isFav: false,
+    missionDescription: "Creating cinematic memories that last a lifetime.",
+    services: [
+      "Wedding Cinematography",
+      "Event Highlights",
+      "Promotional Films",
+    ],
+    images: [
+      "/images/motionframe-1.jpg",
+      "/images/motionframe-2.jpg",
+      "/images/motionframe-3.jpg",
+    ],
+    location: "Kathmandu",
+    website: "https://motionframefilms.com",
+    email: "contact@motionframefilms.com",
+    phoneNumber: "+977-9800000002",
+    socials: {
+      facebook: "https://facebook.com/motionframefilms",
+      instagram: "https://instagram.com/motionframefilms",
+    },
+  },
+  {
+    name: "GlamourWave Salon",
+    category: "Hair and Beauty",
+    description:
+      "GlamourWave Salon offers premium hair and beauty services tailored to make you look your best for any occasion. Specializing in bridal makeovers and event styling.",
+    reviews: [
+      {
+        user: "Sophia Verma",
+        comment:
+          "Loved the bridal look they created for my wedding. Highly skilled team.",
+        rating: 5,
+      },
+      {
+        user: "Anna Rai",
+        comment: "Amazing hair and makeup. I felt like a queen!",
+        rating: 4.7,
+      },
+    ],
+    isFav: true,
+    missionDescription: "Empowering clients to feel confident and beautiful.",
+    services: ["Bridal Makeup", "Event Hair Styling", "Makeover Packages"],
+    images: ["/images/glamourwave-1.jpg", "/images/glamourwave-2.jpg"],
+    location: "Butwal",
+    website: "https://glamourwavesalon.com",
+    email: "info@glamourwavesalon.com",
+    phoneNumber: "+977-9800000003",
+    socials: {
+      facebook: "https://facebook.com/glamourwavesalon",
+      instagram: "https://instagram.com/glamourwavesalon",
+    },
+  },
+  {
+    name: "PetalBloom Designs",
+    category: "Florists",
+    description:
+      "PetalBloom Designs is a floral design studio known for its elegant and artistic flower arrangements. We specialize in weddings and corporate events.",
+    reviews: [
+      {
+        user: "Olivia Shaw",
+        comment:
+          "The flower arrangements were beautiful and added magic to our wedding day.",
+        rating: 5,
+      },
+      {
+        user: "Avery Singh",
+        comment: "Unique designs and fresh flowers. A pleasure to work with.",
+        rating: 4.6,
+      },
+    ],
+    isFav: false,
+    missionDescription:
+      "Crafting beautiful floral experiences for every event.",
+    services: [
+      "Wedding Flower Arrangements",
+      "Corporate Event Flowers",
+      "Custom Bouquets",
+    ],
+    images: ["/images/petalbloom-1.jpg", "/images/petalbloom-2.jpg"],
+    location: "Pokhara",
+    website: "https://petalbloomdesigns.com",
+    email: "contact@petalbloomdesigns.com",
+    phoneNumber: "+977-9800000004",
+    socials: {
+      facebook: "https://facebook.com/petalbloomdesigns",
+      instagram: "https://instagram.com/petalbloomdesigns",
+    },
+  },
+  {
+    name: "SweetCrave Bakery",
+    category: "Cakes and Bakeries",
+    description:
+      "SweetCrave Bakery is your go-to destination for delicious cakes and pastries. Specializing in custom wedding cakes and dessert catering for events.",
+    reviews: [
+      {
+        user: "Daniel Wright",
+        comment:
+          "The wedding cake was both stunning and delicious! Exceeded our expectations.",
+        rating: 5,
+      },
+      {
+        user: "Elena Johnson",
+        comment: "Best bakery in town. Their pastries are to die for!",
+        rating: 4.9,
+      },
+    ],
+    isFav: true,
+    missionDescription: "Baking love into every bite.",
+    services: [
+      "Wedding Cakes",
+      "Event Dessert Catering",
+      "Custom Pastry Orders",
+    ],
+    images: ["/images/sweetcrave-1.jpg", "/images/sweetcrave-2.jpg"],
+    location: "Butwal",
+    website: "https://sweetcravebakery.com",
+    email: "orders@sweetcravebakery.com",
+    phoneNumber: "+977-9800000005",
+    socials: {
+      facebook: "https://facebook.com/sweetcravebakery",
+      instagram: "https://instagram.com/sweetcravebakery",
+    },
+  },
+];
