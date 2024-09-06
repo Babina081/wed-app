@@ -1,7 +1,6 @@
 import React from "react";
 import Heading from "./Heading";
 import { eventServices } from "@/utils/data";
-import Image from "next/image";
 import Link from "next/link";
 
 const Categories = () => {

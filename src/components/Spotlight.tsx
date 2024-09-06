@@ -1,6 +1,6 @@
 import React from "react";
 import Heading from "./Heading";
-import { eventServices, spotlightServices } from "@/utils/data";
+import { spotlightServices } from "@/utils/data";
 import Link from "next/link";
 
 const Spotlight = () => {
