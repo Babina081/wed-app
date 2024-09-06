@@ -28,7 +28,9 @@ const Navbar = () => {
   return (
     <nav className="sticky top-0 bg-purple-300 z-10 ">
       <div className="flex justify-between items-center relative bg-purple-300 py-4 px-10 z-20">
-        <Heading>Wed-App</Heading>
+        <Heading>
+          <Link href="/">Wed-App</Link>
+        </Heading>
         <div
           className="cursor-pointer md:hidden border border-black text-black rounded-lg p-2 hover:text-white hover:border-white transition-all duration-300 ease-in-out"
           onClick={toggleMenu}
@@ -71,11 +73,7 @@ const Navbar = () => {
                       key={service.name}
                       className="text-black hover:bg-slate-200 p-2 w-full cursor-pointer"
                     >
-                      <Link
-                        href={`/services/${service.name
-                          .toLowerCase()
-                          .replace(/ /g, "-")}`}
-                      >
+                      <Link href={`/services/${service.name}`}>
                         {service.name}
                       </Link>
                     </li>
@@ -127,11 +125,7 @@ const Navbar = () => {
                     key={service.name}
                     className="text-black hover:bg-slate-200 p-2 cursor-pointer"
                   >
-                    <Link
-                      href={`/services/${service.name
-                        .toLowerCase()
-                        .replace(/ /g, "-")}`}
-                    >
+                    <Link href={`/services/${service.name}`}>
                       {service.name}
                     </Link>
                   </li>
