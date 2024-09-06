@@ -20,18 +20,18 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="sticky top-0 bg-orange-300">
-      <div className="flex justify-between items-center relative bg-orange-300 px-4 py-4 text">
-        <h1 className="text-2xl font-bold">Wed-App</h1>
+    <nav className="sticky top-0 bg-purple-300 ">
+      <div className="flex justify-between items-center relative bg-purple-300 py-4 px-10 ">
+        <h1 className="text-2xl font-bold text-black">Wed-App</h1>
         <div
-          className="cursor-pointer md:hidden border border-black rounded-lg p-2 hover:text-white hover:border-white transition-all duration-300 ease-in-out"
+          className="cursor-pointer md:hidden border border-black text-black rounded-lg p-2 hover:text-white hover:border-white transition-all duration-300 ease-in-out"
           onClick={toggleMenu}
         >
           {isOpen ? <FaTimes /> : <FaBars />}
         </div>
         {isOpen && (
           <ul
-            className=" absolute top-16 left-0 right-0  flex md:hidden flex-col gap-4 bg-orange-300 z-10 px-4 py-4 
+            className=" absolute top-16 left-0 right-0  flex md:hidden flex-col gap-4 bg-purple-300 z-10 px-10 pb-4 
           "
           >
             <li>
@@ -61,7 +61,7 @@ const Navbar = () => {
             </li>
           </ul>
         )}
-        <ul className="hidden md:flex flex-row gap-4 bg-orange-300 ">
+        <ul className="hidden md:flex flex-row gap-4 bg-purple-300 ">
           <li>
             <Link href="/" className={isActive("/")}>
               Home
