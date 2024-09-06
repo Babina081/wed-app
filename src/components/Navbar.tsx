@@ -3,6 +3,8 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import React, { useState } from "react";
 import { FaBars, FaCaretDown, FaTimes } from "react-icons/fa";
+import Heading from "./Heading";
+import { eventServices } from "../utils/data";
 
 const Navbar = () => {
   const pathname = usePathname();
@@ -23,22 +25,10 @@ const Navbar = () => {
     setDropdownOpen(!dropdownOpen);
   };
 
-  const eventServices = [
-    "Photographers",
-    "Videographers",
-    "Hair and Beauty",
-    "Boutiques",
-    "Florists",
-    "Cakes and Bakeries",
-    "Venues",
-    "Event Planners",
-    "Travel Experts",
-  ];
-
   return (
     <nav className="sticky top-0 bg-purple-300 ">
       <div className="flex justify-between items-center relative bg-purple-300 py-4 px-10 ">
-        <h1 className="text-2xl font-bold text-black">Wed-App</h1>
+        <Heading>Wed-App</Heading>
         <div
           className="cursor-pointer md:hidden border border-black text-black rounded-lg p-2 hover:text-white hover:border-white transition-all duration-300 ease-in-out"
           onClick={toggleMenu}
@@ -78,10 +68,16 @@ const Navbar = () => {
                 <ul className="flex flex-col  mt-2 bg-white rounded-lg p-4 ">
                   {eventServices.map((service) => (
                     <li
-                      key={service}
+                      key={service.name}
                       className="text-black hover:bg-slate-200 p-2 w-full cursor-pointer"
                     >
-                      <Link href={`/services/${service}`}>{service}</Link>
+                      <Link
+                        href={`/services/${service.name
+                          .toLowerCase()
+                          .replace(/ /g, "-")}`}
+                      >
+                        {service.name}
+                      </Link>
                     </li>
                   ))}
                 </ul>
@@ -128,10 +124,16 @@ const Navbar = () => {
               <ul className="flex flex-col  absolute left-0 w-40  rounded-lg bg-white justify-center overflow-hidden z-10 mt-2">
                 {eventServices.map((service) => (
                   <li
-                    key={service}
+                    key={service.name}
                     className="text-black hover:bg-slate-200 p-2 cursor-pointer"
                   >
-                    <Link href={`/services/${service}`}>{service}</Link>
+                    <Link
+                      href={`/services/${service.name
+                        .toLowerCase()
+                        .replace(/ /g, "-")}`}
+                    >
+                      {service.name}
+                    </Link>
                   </li>
                 ))}
               </ul>
