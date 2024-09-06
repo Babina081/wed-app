@@ -105,3 +105,56 @@ export const socialMediaLinks = [
   { platform: "Instagram", icon: FaInstagram, url: "https://instagram.com" },
   { platform: "LinkedIn", icon: FaLinkedin, url: "https://linkedin.com" },
 ];
+
+export const eventCompanies = [
+  {
+    name: "LensCraft Studios",
+    category: "Photographers",
+    location: "Pokhara",
+  },
+  {
+    name: "MotionFrame Films",
+    category: "Videographers",
+    location: "Kathmandu",
+  },
+  {
+    name: "GlamourWave Salon",
+    category: "Hair and Beauty",
+    location: "Butwal",
+  },
+  {
+    name: "Elegance Couture",
+    category: "Boutiques",
+    location: "Kathmandu",
+  },
+  {
+    name: "PetalBloom Designs",
+    category: "Florists",
+    location: "Pokhara",
+  },
+  {
+    name: "SweetCrave Bakery",
+    category: "Cakes and Bakeries",
+    location: "Butwal",
+  },
+  {
+    name: "Serenity Halls",
+    category: "Venues",
+    location: "Kathmandu",
+  },
+  {
+    name: "Elite Events Co.",
+    category: "Event Planners",
+    location: "Pokhara",
+  },
+  {
+    name: "JourneyMasters Travel",
+    category: "Travel Experts",
+    location: "Butwal",
+  },
+  {
+    name: "JourneyMasters Travel",
+    category: "Photographers",
+    location: "Butwal",
+  },
+];

@@ -142,6 +142,9 @@ const Navbar = () => {
           <li>
             <Link href="/favorites" className={isActive("/favorites")}>
               Favorites
+              <span className="px-2 py-1 bg-yellow-200  rounded-full  ml-0.5">
+                1
+              </span>
             </Link>
           </li>
           <li>
