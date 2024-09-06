@@ -3,7 +3,7 @@ import Heading from "./Heading";
 
 const Banner = () => {
   return (
-    <div
+    <section
       className="bg-purple-200 h-[60vh] py-4
    px-10 flex flex-col items-center justify-center text-center"
     >
@@ -13,7 +13,7 @@ const Banner = () => {
         artists, event planners and more
       </p>
       {/* input search */}
-    </div>
+    </section>
   );
 };
 
