@@ -37,12 +37,13 @@ const ServicePage = () => {
         <h1>Location:</h1>
         <ul className="flex gap-2">
           {uniqueLocations.map((location, index) => (
-            <li
+            <Link
+              href={`/services/${decodedService}/${location}`}
               key={index}
-              className="border rounded-lg list-none gap-2 py-1 px-4"
+              className="border rounded-lg list-none gap-2 py-1 px-4 hover:bg-gray-300 transition-all duration-300 ease-out"
             >
               {location}
-            </li>
+            </Link>
           ))}
         </ul>
       </div>
@@ -56,7 +57,7 @@ const ServicePage = () => {
           )
           .map((company) => (
             <Link
-              href={`/services/${company.name}`}
+              href={`/services/${service}/${company.name}`}
               key={company.name}
               className="border p-3 rounded-lg gap-2 flex items-center flex-col hover:bg-slate-500/15 transition-all duration-300 ease-in-out cursor-pointer"
             >
