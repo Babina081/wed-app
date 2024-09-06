@@ -6,7 +6,7 @@ import Link from "next/link";
 const Spotlight = () => {
   return (
     <section
-      className="py-10
+      className="py-20
    px-10 flex items-center justify-center flex-col bg-purple-100/40"
     >
       <Heading>In the Spotlight</Heading>
