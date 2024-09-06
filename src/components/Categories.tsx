@@ -6,8 +6,8 @@ import Link from "next/link";
 
 const Categories = () => {
   return (
-    <div
-      className=" py-4
+    <section
+      className=" py-10
    px-10 flex items-center justify-center flex-col"
     >
       <Heading>Categories</Heading>
@@ -27,7 +27,7 @@ const Categories = () => {
           </Link>
         ))}
       </div>
-    </div>
+    </section>
   );
 };
 
