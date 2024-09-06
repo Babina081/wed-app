@@ -26,8 +26,8 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="sticky top-0 bg-purple-300 ">
-      <div className="flex justify-between items-center relative bg-purple-300 py-4 px-10 ">
+    <nav className="sticky top-0 bg-purple-300 z-10 ">
+      <div className="flex justify-between items-center relative bg-purple-300 py-4 px-10 z-20">
         <Heading>Wed-App</Heading>
         <div
           className="cursor-pointer md:hidden border border-black text-black rounded-lg p-2 hover:text-white hover:border-white transition-all duration-300 ease-in-out"
@@ -37,7 +37,7 @@ const Navbar = () => {
         </div>
         {isOpen && (
           <ul
-            className=" absolute top-16 left-0 right-0  flex md:hidden flex-col gap-4 bg-purple-300 z-10 px-10 pb-4 
+            className=" absolute top-16 left-0 right-0  flex md:hidden flex-col gap-4 bg-purple-300 z-20 px-10 pb-4 
           "
           >
             <li>
@@ -121,7 +121,7 @@ const Navbar = () => {
               />
             </button>
             {dropdownOpen && (
-              <ul className="flex flex-col  absolute left-0 w-40  rounded-lg bg-white justify-center overflow-hidden z-10 mt-2">
+              <ul className="flex flex-col  absolute left-0 w-40  rounded-lg bg-white justify-center overflow-hidden z-20 mt-2">
                 {eventServices.map((service) => (
                   <li
                     key={service.name}
