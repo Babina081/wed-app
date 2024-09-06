@@ -2,12 +2,12 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import React, { useState } from "react";
-import { FaBars, FaTimes } from "react-icons/fa";
+import { FaBars, FaCaretDown, FaTimes } from "react-icons/fa";
 
 const Navbar = () => {
   const pathname = usePathname();
   const [isOpen, setIsOpen] = useState(false);
-  // const [activeLink, setActiveLink] = useState("Home");
+  const [dropdownOpen, setDropdownOpen] = useState(false);
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);
@@ -18,6 +18,22 @@ const Navbar = () => {
       ? "text-white bg-black p-2 rounded-lg"
       : "text-black";
   };
+
+  const handleDropdownToggle = () => {
+    setDropdownOpen(!dropdownOpen);
+  };
+
+  const eventServices = [
+    "Photographers",
+    "Videographers",
+    "Hair and Beauty",
+    "Boutiques",
+    "Florists",
+    "Cakes and Bakeries",
+    "Venues",
+    "Event Planners",
+    "Travel Experts",
+  ];
 
   return (
     <nav className="sticky top-0 bg-purple-300 ">
@@ -45,9 +61,31 @@ const Navbar = () => {
               </Link>
             </li>
             <li>
-              <Link href="/services" className={isActive("/services")}>
+              <button
+                onClick={handleDropdownToggle}
+                className={`w-full text-left ${isActive(
+                  "/services"
+                )} flex items-center justify-start`}
+              >
                 Services
-              </Link>
+                <FaCaretDown
+                  className={`ml-2 ${
+                    dropdownOpen ? "rotate-180" : ""
+                  } transition-transform duration-300`}
+                />
+              </button>
+              {dropdownOpen && (
+                <ul className="flex flex-col  mt-2 bg-white rounded-lg p-4 ">
+                  {eventServices.map((service) => (
+                    <li
+                      key={service}
+                      className="text-black hover:bg-slate-200 p-2 w-full cursor-pointer"
+                    >
+                      <Link href={`/services/${service}`}>{service}</Link>
+                    </li>
+                  ))}
+                </ul>
+              )}
             </li>
             <li>
               <Link href="/favorites" className={isActive("/favorites")}>
@@ -61,7 +99,7 @@ const Navbar = () => {
             </li>
           </ul>
         )}
-        <ul className="hidden md:flex flex-row gap-4 bg-purple-300 ">
+        <ul className="hidden md:flex flex-row gap-4 bg-purple-300 justify-center items-center">
           <li>
             <Link href="/" className={isActive("/")}>
               Home
@@ -72,10 +110,32 @@ const Navbar = () => {
               About
             </Link>
           </li>
-          <li>
-            <Link href="/services" className={isActive("/services")}>
+          <li className="relative">
+            <button
+              onClick={handleDropdownToggle}
+              className={`w-full text-left ${isActive(
+                "/services"
+              )} flex items-center justify-center`}
+            >
               Services
-            </Link>
+              <FaCaretDown
+                className={`ml-2 ${
+                  dropdownOpen ? "rotate-180" : ""
+                } transition-transform duration-300`}
+              />
+            </button>
+            {dropdownOpen && (
+              <ul className="flex flex-col  absolute left-0 w-40  rounded-lg bg-white justify-center overflow-hidden z-10 mt-2">
+                {eventServices.map((service) => (
+                  <li
+                    key={service}
+                    className="text-black hover:bg-slate-200 p-2 cursor-pointer"
+                  >
+                    <Link href={`/services/${service}`}>{service}</Link>
+                  </li>
+                ))}
+              </ul>
+            )}
           </li>
           <li>
             <Link href="/favorites" className={isActive("/favorites")}>
