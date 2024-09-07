@@ -1,9 +1,15 @@
+"use client";
 import Button from "@/components/Button";
+import { RegisterModal } from "@/components/ContactBanner";
 import Heading from "@/components/Heading";
 import Link from "next/link";
-import React from "react";
+import React, { useState } from "react";
 
 const AboutPage = () => {
+  const [isDialogOpen, setIsDialogOpen] = useState(false);
+
+  const openDialog = () => setIsDialogOpen(true);
+  const closeDialog = () => setIsDialogOpen(false);
   return (
     <section className="flex flex-col py-10 px-10 items-center justify-center gap-4">
       <Heading>AboutPage</Heading>
@@ -36,9 +42,8 @@ const AboutPage = () => {
         working extra close with vendors like you toward a shared goal of
         success.
       </p>
-      <Link href="/register">
-        <Button>Register With Us</Button>
-      </Link>
+      <Button onClick={openDialog}>Register</Button>
+      {isDialogOpen && <RegisterModal onClose={closeDialog} />}
     </section>
   );
 };
