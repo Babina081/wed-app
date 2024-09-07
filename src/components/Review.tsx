@@ -4,13 +4,29 @@ import Button from "./Button";
 import Heading from "./Heading";
 import ReviewModal from "./ReviewModal";
 
-const Review = ({ company }: { company: any }) => {
+// Define the shape of each review
+interface Review {
+  user: string;
+  comment: string;
+}
+
+// Define the shape of the company prop
+interface Company {
+  reviews: Review[];
+}
+
+// Define the props for the Review component
+interface ReviewProps {
+  company: Company;
+}
+
+const Review = ({ company }: ReviewProps) => {
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   const handleOpenModal = () => setIsModalOpen(true);
   const handleCloseModal = () => setIsModalOpen(false);
 
-  const handleSubmitReview = (reviewData: any) => {
+  const handleSubmitReview = (reviewData: Review) => {
     console.log("Review submitted:", reviewData);
     // Here you can add logic to submit the review data to a server
   };
@@ -20,7 +36,7 @@ const Review = ({ company }: { company: any }) => {
       <Heading>Recommendations and Reviews</Heading>
       {company.reviews && company.reviews.length > 0 ? (
         <ul className="space-y-4">
-          {company.reviews.map((review: any, index: any) => (
+          {company.reviews.map((review, index) => (
             <li key={index} className="border p-4 rounded-lg">
               <p className="font-semibold">{review.user}</p>
               <p>{review.comment}</p>
