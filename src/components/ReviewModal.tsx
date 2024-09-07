@@ -3,7 +3,7 @@ import Button from "./Button";
 import { ImCancelCircle } from "react-icons/im";
 
 // Define the type for the review form data
-interface ReviewData {
+export interface ReviewData {
   name: string;
   email: string;
   rating: number;

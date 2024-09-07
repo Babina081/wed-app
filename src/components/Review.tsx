@@ -2,7 +2,7 @@
 import React, { useState } from "react";
 import Button from "./Button";
 import Heading from "./Heading";
-import ReviewModal from "./ReviewModal";
+import ReviewModal, { ReviewData } from "./ReviewModal";
 
 // Define the shape of each review
 interface Review {
@@ -26,9 +26,14 @@ const Review = ({ company }: ReviewProps) => {
   const handleOpenModal = () => setIsModalOpen(true);
   const handleCloseModal = () => setIsModalOpen(false);
 
-  const handleSubmitReview = (reviewData: Review) => {
+  const handleSubmitReview = (reviewData: ReviewData) => {
     console.log("Review submitted:", reviewData);
     // Here you can add logic to submit the review data to a server
+    // const transformedReview: Review = {
+    //   user: reviewData.name,
+    //   comment: reviewData.message,
+    // };
+    // console.log("Transformed review:", transformedReview);
   };
 
   return (
