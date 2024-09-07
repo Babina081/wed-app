@@ -22,13 +22,7 @@ const Banner = () => {
   // Handle search button click
   const handleSearch = () => {
     // Redirect to the desired URL
-    router.push(
-      `/services/${selectedCategory
-        .toLowerCase()
-        .replace(/ /g, "-")}/${selectedLocation
-        .toLowerCase()
-        .replace(/ /g, "-")}`
-    );
+    router.push(`/services/${selectedCategory}/${selectedLocation}`);
   };
 
   return (
