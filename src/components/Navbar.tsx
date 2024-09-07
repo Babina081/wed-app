@@ -5,11 +5,18 @@ import React, { useState } from "react";
 import { FaBars, FaCaretDown, FaTimes } from "react-icons/fa";
 import Heading from "./Heading";
 import { eventServices } from "../utils/data";
+import { useSelector } from "react-redux";
+import { RootState } from "@/redux/store/store";
 
 const Navbar = () => {
   const pathname = usePathname();
   const [isOpen, setIsOpen] = useState(false);
   const [dropdownOpen, setDropdownOpen] = useState(false);
+
+  const favorites = useSelector(
+    (state: RootState) => state.favorites.favoriteItems
+  ); // Adjust based on your state shape
+  const favoriteCount = favorites.length;
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);
@@ -83,7 +90,12 @@ const Navbar = () => {
             </li>
             <li>
               <Link href="/favorites" className={isActive("/favorites")}>
-                Favorites
+                Favorites{" "}
+                {favoriteCount > 0 && (
+                  <span className="px-2 py-1 bg-yellow-200 rounded-full ml-2">
+                    {favoriteCount}
+                  </span>
+                )}
               </Link>
             </li>
             <li>
@@ -136,9 +148,11 @@ const Navbar = () => {
           <li>
             <Link href="/favorites" className={isActive("/favorites")}>
               Favorites
-              <span className="px-2 py-1 bg-yellow-200  rounded-full  ml-0.5">
-                1
-              </span>
+              {favoriteCount > 0 && (
+                <span className="px-2 py-1 bg-yellow-200 rounded-full ml-2">
+                  {favoriteCount}
+                </span>
+              )}
             </Link>
           </li>
           <li>
