@@ -22,7 +22,7 @@ const Banner = () => {
   // Handle search button click
   const handleSearch = () => {
     // Redirect to the desired URL
-    router.push(`/services/${selectedCategory}/${selectedLocation}`);
+    router.push(`/services/${selectedCategory}/location/${selectedLocation}`);
   };
 
   return (
