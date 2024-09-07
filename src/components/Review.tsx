@@ -4,7 +4,7 @@ import Button from "./Button";
 import Heading from "./Heading";
 import ReviewModal from "./ReviewModal";
 
-const Review = ({ company }: any) => {
+const Review = ({ company }: { company: any }) => {
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   const handleOpenModal = () => setIsModalOpen(true);
