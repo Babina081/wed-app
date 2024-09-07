@@ -56,20 +56,26 @@ const LocationPage = () => {
         </Button>
       </div>
       <div className="flex gap-2 items-center justify-center">
-        <h1>Location:</h1>
-        <ul className="flex gap-2">
-          {uniqueLocations.map((location, index) => {
-            return (
-              <Link
-                href={`/services/${service}/location/${location}`}
-                key={index}
-                className="border rounded-lg list-none gap-2 py-1 px-4 hover:bg-gray-300 transition-all duration-300 ease-out"
-              >
-                {location}
-              </Link>
-            );
-          })}
-        </ul>
+        {filteredCompanies.length > 0 ? (
+          <>
+            <h1>Location:</h1>
+            <ul className="flex gap-2">
+              {uniqueLocations.map((location, index) => {
+                return (
+                  <Link
+                    href={`/services/${service}/location/${location}`}
+                    key={index}
+                    className="border rounded-lg list-none gap-2 py-1 px-4 hover:bg-gray-300 transition-all duration-300 ease-out"
+                  >
+                    {location}
+                  </Link>
+                );
+              })}
+            </ul>
+          </>
+        ) : (
+          <></>
+        )}
       </div>
 
       <ul className="grid grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-4 w-full mt-4">
@@ -90,7 +96,13 @@ const LocationPage = () => {
             </Link>
           ))
         ) : (
-          <p>No companies found for this service in the selected location.</p>
+          <div className="col-span-4 text-center  ">
+            <div className="m-10 ">
+              <span className="text-red-200 border p-2 rounded-lg ">
+                No companies found for this service in the selected location.{" "}
+              </span>
+            </div>
+          </div>
         )}
       </ul>
     </section>

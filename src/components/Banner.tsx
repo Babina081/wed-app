@@ -36,11 +36,11 @@ const Banner = () => {
         artists, event planners and more
       </p>
       {/* Search bar */}
-      <div className="mt-4 flex gap-2">
+      <div className="mt-4 flex gap-2 ">
         <select
           value={selectedCategory}
           onChange={(e) => setSelectedCategory(e.target.value)}
-          className="border p-2 rounded-lg mr-2"
+          className="inline-block w-full border  rounded-lg "
         >
           {categories.map((category) => (
             <option key={category} value={category}>
