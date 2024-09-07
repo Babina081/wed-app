@@ -2,10 +2,19 @@ import React, { useState } from "react";
 import Button from "./Button";
 import { ImCancelCircle } from "react-icons/im";
 
+// Define the type for the review form data
+interface ReviewData {
+  name: string;
+  email: string;
+  rating: number;
+  message: string;
+}
+
+// Define the props for the ReviewModal component
 interface ReviewModalProps {
   isOpen: boolean;
   onClose: () => void;
-  onSubmit: (data: any) => void;
+  onSubmit: (data: ReviewData) => void; // Use the ReviewData type here
 }
 
 // ReviewModal Component
