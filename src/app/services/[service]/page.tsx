@@ -35,15 +35,17 @@ const ServicePage = () => {
       <div className="flex gap-2 items-center justify-center">
         <h1>Location:</h1>
         <ul className="flex gap-2">
-          {uniqueLocations.map((location, index) => (
-            <Link
-              href={`/services/${decodedService}/${location}`}
-              key={index}
-              className="border rounded-lg list-none gap-2 py-1 px-4 hover:bg-gray-300 transition-all duration-300 ease-out"
-            >
-              {location}
-            </Link>
-          ))}
+          {uniqueLocations.map((location, index) => {
+            return (
+              <Link
+                href={`/services/${service}/location/${location}`}
+                key={index}
+                className="border rounded-lg list-none gap-2 py-1 px-4 hover:bg-gray-300 transition-all duration-300 ease-out"
+              >
+                {location}
+              </Link>
+            );
+          })}
         </ul>
       </div>
 
