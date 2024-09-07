@@ -8,7 +8,7 @@ export const RegisterModal = ({ onClose }: { onClose: () => void }) => {
   return (
     <div className="fixed inset-0 flex items-center justify-center bg-gray-900 bg-opacity-50 z-50">
       <div className="bg-white p-6 rounded-lg shadow-lg max-w-lg w-full relative">
-        <h2 className="text-2xl mb-4">Register With Us</h2>
+        <h2 className="text-2xl font-semibold mb-4">Register With Us</h2>
         <button
           className="absolute top-4 right-4 text-gray-600 hover:text-gray-900 flex items-center justify-center"
           onClick={onClose}
