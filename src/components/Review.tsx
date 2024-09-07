@@ -1,8 +1,20 @@
-import React from "react";
+"use client";
+import React, { useState } from "react";
 import Button from "./Button";
 import Heading from "./Heading";
+import ReviewModal from "./ReviewModal";
 
 const Review = ({ company }: any) => {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const handleOpenModal = () => setIsModalOpen(true);
+  const handleCloseModal = () => setIsModalOpen(false);
+
+  const handleSubmitReview = (reviewData: any) => {
+    console.log("Review submitted:", reviewData);
+    // Here you can add logic to submit the review data to a server
+  };
+
   return (
     <div id="reviews" className="flex flex-col gap-4 bg-slate-300/10 p-4 mt-4">
       <Heading>Recommendations and Reviews</Heading>
@@ -19,7 +31,12 @@ const Review = ({ company }: any) => {
       ) : (
         <p className="text-gray-600">No reviews yet.</p>
       )}
-      <Button>Write your own review</Button>
+      <Button onClick={handleOpenModal}>Write your own review</Button>
+      <ReviewModal
+        isOpen={isModalOpen}
+        onClose={handleCloseModal}
+        onSubmit={handleSubmitReview}
+      />
     </div>
   );
 };
