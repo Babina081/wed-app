@@ -21,7 +21,7 @@ const Categories = () => {
       <div className="grid grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-4 w-full mt-4">
         {eventServices.map((category) => (
           <Link
-            href={`/services/${category.name.toLowerCase().replace(/ /g, "-")}`}
+            href={`/services/${category.name}`}
             key={category.name}
             className="border p-3 rounded-lg gap-2 flex items-center flex-col hover:bg-slate-500/15  transition-all duration-300 ease-in-out cursor-pointer"
           >
