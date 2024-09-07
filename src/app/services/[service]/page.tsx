@@ -7,7 +7,6 @@ import React from "react";
 
 const ServicePage = () => {
   const { service } = useParams<{ service: string }>();
-  console.log(service);
 
   // Decode the URL-encoded service name and replace dashes with spaces
   const decodedService = decodeURIComponent(service.replace(/-/g, " "));
