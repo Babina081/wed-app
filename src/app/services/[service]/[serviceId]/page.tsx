@@ -4,20 +4,44 @@ import Heading from "@/components/Heading";
 import { eventCompaniesDetails } from "@/utils/data";
 import Link from "next/link";
 import { useParams, useRouter } from "next/navigation";
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
-
 import "slick-carousel/slick/slick-theme.css";
 import { FaHeart, FaRegCheckSquare, FaRegHeart } from "react-icons/fa";
+import { useDispatch, useSelector } from "react-redux";
+import { add, selectFavorites } from "@/redux/features/favoriteSlice";
+import toast from "react-hot-toast";
 
 const ServiceIdPage = () => {
   const router = useRouter();
-  const { serviceId } = useParams();
+  const { serviceId, service } = useParams();
+  console.log(service);
+
+  const [isInFavorites, setIsInFavorites] = useState<boolean>(false);
+
+  const dispatch = useDispatch();
+  const favorites = useSelector(selectFavorites); // Assuming you have a selector for favorites
+
   // Ensure serviceId is treated as a string
   const decodedServiceId = decodeURIComponent(
     Array.isArray(serviceId) ? serviceId[0] : serviceId || ""
   );
+
+  // Find the company from eventCompaniesDetails
+  const company = eventCompaniesDetails.find(
+    (company) => company.name.toLowerCase() === decodedServiceId.toLowerCase()
+  );
+
+  useEffect(() => {
+    if (company) {
+      setIsInFavorites(isFavorite(company.name));
+    }
+  }, [favorites, company]);
+
+  // Check if the company is in favorites
+  const isFavorite = (companyName: string) =>
+    favorites.some((item) => item.name === companyName);
 
   const settings = {
     dots: true,
@@ -46,6 +70,20 @@ const ServiceIdPage = () => {
       },
     ],
   };
+
+  const handleAddToFavorites = (company: {
+    name: string;
+    location: string;
+  }) => {
+    if (!isFavorite(company.name)) {
+      dispatch(add({ ...company, service: service.toString() }));
+      toast.success(`${company.name} has been added to favorites!`);
+      setIsInFavorites(true);
+    } else {
+      toast.error(`${company.name} is already in your favorites.`);
+    }
+  };
+
   return (
     <section className="flex flex-col gap-2 justify-between">
       {eventCompaniesDetails
@@ -76,7 +114,7 @@ const ServiceIdPage = () => {
                 <Link href={`/services/${company.name}/${serviceId}/#reviews`}>
                   <Button color="white">View Reviews</Button>
                 </Link>
-                {company.isFav === true ? (
+                {isInFavorites ? (
                   <div className="flex gap-2">
                     <Button color="yellow" disabled>
                       <span className="flex gap-2 items-center justify-center ">
@@ -96,7 +134,7 @@ const ServiceIdPage = () => {
                     </Button>
                   </div>
                 ) : (
-                  <Button>
+                  <Button onClick={() => handleAddToFavorites(company)}>
                     <span className="flex gap-2 items-center justify-center">
                       <span>Add to Favorite</span> <FaRegHeart />{" "}
                     </span>
