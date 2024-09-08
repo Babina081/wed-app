@@ -24,7 +24,7 @@ const FavoritePage = () => {
    px-10 flex items-center  flex-col bg-purple-100/40 gap-4"
     >
       <Heading>My Favorite Shortlisted</Heading>
-      <ul className="grid grid-cols-4 gap-4 mx-auto w-full  ">
+      <ul className="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 mx-auto w-full  ">
         {favorites.length > 0 ? (
           favorites.map((favorite, index) => (
             <li

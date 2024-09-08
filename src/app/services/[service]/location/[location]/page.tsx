@@ -84,12 +84,19 @@ const LocationPage = () => {
             <Link
               href={`/services/${service}/${company.name}`}
               key={company.name}
-              className="border p-3 rounded-lg gap-2 flex items-center flex-col hover:bg-slate-500/15 transition-all duration-300 ease-in-out cursor-pointer"
+              className="border p-3 rounded-lg gap-2 flex items-center flex-col hover:bg-slate-500/15 transition-all duration-300 ease-in-out cursor-pointer relative"
             >
+              {company.isFeatured && (
+                <div className="absolute top-5 left-0  bg-yellow-200 text-black p-2 rounded-r-lg font-bold text-lg ">
+                  Featured
+                </div>
+              )}
               <img
                 src="https://picsum.photos/200"
                 alt={company.name}
-                className="w-full h-full object-cover rounded-lg"
+                className={`w-full h-full object-cover rounded-lg ${
+                  company.isFeatured ? "border-4 border-yellow-300" : ""
+                }`}
               />
               <Heading>{company.name}</Heading>
               <p>{company.location}</p>

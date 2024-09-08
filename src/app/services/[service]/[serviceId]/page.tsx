@@ -174,7 +174,7 @@ const ServiceIdPage = () => {
                 </div>
                 <Review company={company}></Review>
               </div>
-              <div className="col-span-1 bg-slate-300/10 p-4 hidden md:flex flex-col items-center justify-start gap-2 h-min sticky top-20 ">
+              <div className="col-span-1 bg-slate-300/10 p-4 hidden md:flex flex-col items-center justify-start gap-2 h-min relative">
                 <img
                   src="https://picsum.photos/200"
                   alt=""
