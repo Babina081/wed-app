@@ -46,9 +46,9 @@ const Review = ({ company }: ReviewProps) => {
 
   return (
     <div id="reviews" className="flex flex-col gap-4 bg-slate-300/10 p-4 mt-4">
-      <div className="flex items-center justify-between">
+      <div className="flex flex-col md:flex-row items-center justify-between gap-2">
         <Heading>Recommendations and Reviews</Heading>
-        <div>
+        <div className="text-right w-full">
           <span className="font-bold text-lg">{reviews.length}</span> Reviews
         </div>
       </div>
