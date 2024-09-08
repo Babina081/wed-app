@@ -399,4 +399,130 @@ export const eventCompaniesDetails = [
       },
     ],
   },
+  {
+    name: "Fotos Factory",
+    category: "Photographers",
+    location: "Dhalku, Kathmandu",
+    description:
+      "Fotos Factory offers professional photography services specializing in capturing memorable moments with creative and artistic flair.",
+    reviews: [
+      {
+        user: "Ravi Sharma",
+        comment: "Incredible service and fantastic photos. Highly recommended!",
+        rating: 4.8,
+      },
+      {
+        user: "Priya Thapa",
+        comment: "Great experience and very professional team.",
+        rating: 4.7,
+      },
+    ],
+    isFav: false,
+    missionDescription: "To provide high-quality photography services that capture the essence of every moment.",
+    services: ["Event Photography", "Portrait Photography", "Commercial Photography"],
+    images: [
+      "https://picsum.photos/300/200?random=4",
+      "https://picsum.photos/300/200?random=5",
+      "https://picsum.photos/300/200?random=6",
+    ],
+    website: "https://fotosfactory.com",
+    email: "info@fotosfactory.com",
+    phoneNumber: "+977-9800000006",
+    socials: [
+      {
+        type: "facebook",
+        link: "https://facebook.com/fotosfactory",
+        icon: FaFacebook,
+      },
+      {
+        type: "instagram",
+        link: "https://instagram.com/fotosfactory",
+        icon: FaInstagram,
+      },
+    ],
+  },
+  {
+    name: "Glamour Touch Studio",
+    category: "Hair and Beauty",
+    location: "Chabahil, Kathmandu",
+    description:
+      "Glamour Touch Studio offers a range of beauty and grooming services with a focus on elegance and style. Ideal for special occasions and everyday beauty needs.",
+    reviews: [
+      {
+        user: "Suman Shrestha",
+        comment: "Excellent service and very skilled staff.",
+        rating: 4.9,
+      },
+      {
+        user: "Nisha Kumari",
+        comment: "Love the personalized attention and results!",
+        rating: 4.8,
+      },
+    ],
+    isFav: true,
+    missionDescription: "Enhancing your beauty with a touch of glamour.",
+    services: ["Bridal Makeup", "Hair Styling", "Skincare Treatments"],
+    images: [
+      "https://picsum.photos/300/200?random=7",
+      "https://picsum.photos/300/200?random=8",
+      "https://picsum.photos/300/200?random=9",
+    ],
+    website: "https://glamourtouchstudio.com",
+    email: "contact@glamourtouchstudio.com",
+    phoneNumber: "+977-9800000007",
+    socials: [
+      {
+        type: "facebook",
+        link: "https://facebook.com/glamourtouchstudio",
+        icon: FaFacebook,
+      },
+      {
+        type: "instagram",
+        link: "https://instagram.com/glamourtouchstudio",
+        icon: FaInstagram,
+      },
+    ],
+  },
+  {
+    name: "Glamorous Events",
+    category: "Event Planners",
+    location: "Lalitpur, Kathmandu",
+    description:
+      "Magic Moments Decor specializes in creating stunning decor for weddings and events. From floral arrangements to complete event setups, we bring your vision to life.",
+    reviews: [
+      {
+        user: "Deepak Gupta",
+        comment: "Transformative decor and exceptional service.",
+        rating: 4.9,
+      },
+      {
+        user: "Anjali Rathi",
+        comment: "Amazing decor that made our event unforgettable!",
+        rating: 4.8,
+      },
+    ],
+    isFav: false,
+    missionDescription: "Turning events into magical moments with beautiful decor.",
+    services: ["Wedding Decor", "Event Setup", "Custom Designs"],
+    images: [
+      "https://picsum.photos/300/200?random=10",
+      "https://picsum.photos/300/200?random=11",
+      "https://picsum.photos/300/200?random=12",
+    ],
+    website: "https://magicmomentsdecor.com",
+    email: "info@magicmomentsdecor.com",
+    phoneNumber: "+977-9800000008",
+    socials: [
+      {
+        type: "facebook",
+        link: "https://facebook.com/magicmomentsdecor",
+        icon: FaFacebook,
+      },
+      {
+        type: "instagram",
+        link: "https://instagram.com/magicmomentsdecor",
+        icon: FaInstagram,
+      },
+    ],
+  },
 ];
