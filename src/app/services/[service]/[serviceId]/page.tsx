@@ -216,8 +216,7 @@ const ServiceIdPage = () => {
                 <div className="border border-black/30 rounded-lg overflow-hidden flex md:hidden xl:flex ">
                   <iframe
                     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3515.6815184257694!2d83.98369517544957!3d28.216987202829742!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3995944d76693d11%3A0xf1f006d89be13640!2sNew%20Rd%2C%20Pokhara%2033700!5e0!3m2!1sen!2snp!4v1725765119706!5m2!1sen!2snp"
-                    width="400"
-                    height="300"
+                    className="w-full h-64 md:h-80 xl:h-96"
                     style={{ border: 0 }}
                     allowFullScreen
                     loading="lazy"
