@@ -21,6 +21,12 @@ const Navbar = () => {
   const toggleMenu = () => {
     setIsOpen(!isOpen);
   };
+
+  const closeMenu = () => {
+    setIsOpen(false);
+    setDropdownOpen(false); // Ensure dropdown also closes
+  };
+
   // Function to check if the link is active
   const isActive = (href: string) => {
     return pathname === href
@@ -50,12 +56,16 @@ const Navbar = () => {
           "
           >
             <li>
-              <Link href="/" className={isActive("/")}>
+              <Link href="/" className={isActive("/")} onClick={closeMenu}>
                 Home
               </Link>
             </li>
             <li>
-              <Link href="/about" className={isActive("/about")}>
+              <Link
+                href="/about"
+                className={isActive("/about")}
+                onClick={closeMenu}
+              >
                 About
               </Link>
             </li>
@@ -80,7 +90,10 @@ const Navbar = () => {
                       key={service.name}
                       className="text-black hover:bg-slate-200 p-2 w-full cursor-pointer"
                     >
-                      <Link href={`/services/${service.name}`}>
+                      <Link
+                        href={`/services/${service.name}`}
+                        onClick={closeMenu}
+                      >
                         {service.name}
                       </Link>
                     </li>
@@ -89,7 +102,11 @@ const Navbar = () => {
               )}
             </li>
             <li>
-              <Link href="/favorites" className={isActive("/favorites")}>
+              <Link
+                href="/favorites"
+                className={isActive("/favorites")}
+                onClick={closeMenu}
+              >
                 Favorites{" "}
                 {favoriteCount > 0 && (
                   <span className="px-2 py-1 bg-yellow-200 rounded-full ml-2">
@@ -99,7 +116,11 @@ const Navbar = () => {
               </Link>
             </li>
             <li>
-              <Link href="/blogs" className={isActive("/blogs")}>
+              <Link
+                href="/blogs"
+                className={isActive("/blogs")}
+                onClick={closeMenu}
+              >
                 Blogs
               </Link>
             </li>
