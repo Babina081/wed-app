@@ -29,11 +29,11 @@ const Review = ({ company }: ReviewProps) => {
   const handleSubmitReview = (reviewData: ReviewData) => {
     console.log("Review submitted:", reviewData);
     // Here you can add logic to submit the review data to a server
-    // const transformedReview: Review = {
-    //   user: reviewData.name,
-    //   comment: reviewData.message,
-    // };
-    // console.log("Transformed review:", transformedReview);
+    const transformedReview: Review = {
+      user: reviewData.name,
+      comment: reviewData.message,
+    };
+    console.log("Transformed review:", transformedReview);
   };
 
   return (
