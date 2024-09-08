@@ -11,7 +11,7 @@ const Spotlight = () => {
   useEffect(() => {
     setLoading(false);
   }, []);
-  
+
   return (
     <section
       className="py-20
@@ -21,9 +21,7 @@ const Spotlight = () => {
       <div className="grid sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-4 w-full mt-4">
         {spotlightServices.map((spotlight) => (
           <Link
-            href={`/services/${spotlight.name
-              .toLowerCase()
-              .replace(/ /g, "-")}`}
+            href={`/services/${spotlight.category}/${spotlight.name}`}
             key={spotlight.name}
             className="border p-3 rounded-lg gap-2 flex items-center  flex-col hover:bg-slate-500/15  transition-all duration-300 ease-in-out cursor-pointer "
           >
