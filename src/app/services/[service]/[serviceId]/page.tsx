@@ -193,6 +193,37 @@ const ServiceIdPage = () => {
                 </a>
                 <p>Email:{company.email}</p>
                 <p>Phone: {company.phoneNumber}</p>
+                <ul className="flex gap-2 mb-4">
+                  {company.socials.map((social) => (
+                    <li
+                      key={social.type}
+                      className="border p-1 rounded-lg border-gray-700 hover:border-gray-900"
+                    >
+                      <a
+                        href={social.link}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        aria-label={social.type}
+                      >
+                        <social.icon
+                          className="text-gray-700 hover:text-gray-900 transition-colors duration-300"
+                          size={24}
+                        />
+                      </a>
+                    </li>
+                  ))}
+                </ul>
+                <div className="border border-black/30 rounded-lg overflow-hidden">
+                  <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3515.6815184257694!2d83.98369517544957!3d28.216987202829742!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3995944d76693d11%3A0xf1f006d89be13640!2sNew%20Rd%2C%20Pokhara%2033700!5e0!3m2!1sen!2snp!4v1725765119706!5m2!1sen!2snp"
+                    width="400"
+                    height="300"
+                    style={{ border: 0 }}
+                    allowFullScreen
+                    loading="lazy"
+                    referrerPolicy="no-referrer-when-downgrade"
+                  ></iframe>
+                </div>
               </div>
             </div>
           </div>
