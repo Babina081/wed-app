@@ -2,13 +2,18 @@ import React from "react";
 
 const Loading = () => {
   return (
-    <div
-      className="inline-block h-8 w-8 animate-spin rounded-full border-4 border-solid border-gray-700 border-t-transparent bg-white fixed top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%]"
-      role="status"
-    >
-      <span className="absolute -m-px h-px w-px overflow-hidden whitespace-nowrap border-0 p-0 [clip:rect(0,0,0,0)]">
-        Loading...
-      </span>
+    <div className="flex h-screen w-screen items-center justify-center">
+      <div className="relative">
+        <div
+          className="w-12 h-12 rounded-full absolute
+  border-8 border-solid border-gray-200"
+        ></div>
+
+        <div
+          className="w-12 h-12 rounded-full animate-spin absolute
+  border-8 border-solid border-purple-500 border-t-transparent"
+        ></div>
+      </div>
     </div>
   );
 };
