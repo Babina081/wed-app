@@ -174,7 +174,7 @@ export const eventCompaniesDetails = [
     name: "LensCraft Studios",
     category: "Photographers",
     description:
-      "Weddings are special. Of all the days in your life, your wedding day is the day that symbolizes new beginnings. A day that promises fresh start and sweet love. A day which joins you to a different person, a different family and a whole new life. A day where joyous celebrations and misty farewells go hand in hand. A day just for you and your beloved. We genuinely believe in making this day special for you.We are committed to make our client's day the most memorable one with what we know best. Wedding photography and videography services at a best price. For the past few years, we have been a part of many marriages, capturing your special moments and smiles. And it is the love and affection from our past and present clients that make us Nepal’s most favored Premium Wedding Photography and Videography Company. More than a company, we are a group of young minds who believe in giving all our efforts into making your wedding: A Dream That Came True.",
+      "Weddings are special. Of all the days in your life, your wedding day is the day that symbolizes new beginnings... We are a group of young minds who believe in giving all our efforts into making your wedding: A Dream That Came True.",
     reviews: [
       {
         user: "John Doe",
@@ -200,10 +200,18 @@ export const eventCompaniesDetails = [
     website: "https://lenscraftstudios.com",
     email: "info@lenscraftstudios.com",
     phoneNumber: "+977-9800000001",
-    socials: {
-      facebook: "https://facebook.com/lenscraftstudios",
-      instagram: "https://instagram.com/lenscraftstudios",
-    },
+    socials: [
+      {
+        type: "facebook",
+        link: "https://facebook.com/lenscraftstudios",
+        icon: FaFacebook,
+      },
+      {
+        type: "instagram",
+        link: "https://instagram.com/lenscraftstudios",
+        icon: FaInstagram,
+      },
+    ],
   },
   {
     name: "MotionFrame Films",
@@ -240,10 +248,18 @@ export const eventCompaniesDetails = [
     website: "https://motionframefilms.com",
     email: "contact@motionframefilms.com",
     phoneNumber: "+977-9800000002",
-    socials: {
-      facebook: "https://facebook.com/motionframefilms",
-      instagram: "https://instagram.com/motionframefilms",
-    },
+    socials: [
+      {
+        type: "facebook",
+        link: "https://facebook.com/motionframefilms",
+        icon: FaFacebook,
+      },
+      {
+        type: "instagram",
+        link: "https://instagram.com/motionframefilms",
+        icon: FaInstagram,
+      },
+    ],
   },
   {
     name: "GlamourWave Salon",
@@ -275,10 +291,18 @@ export const eventCompaniesDetails = [
     website: "https://glamourwavesalon.com",
     email: "info@glamourwavesalon.com",
     phoneNumber: "+977-9800000003",
-    socials: {
-      facebook: "https://facebook.com/glamourwavesalon",
-      instagram: "https://instagram.com/glamourwavesalon",
-    },
+    socials: [
+      {
+        type: "facebook",
+        link: "https://facebook.com/glamourwavesalon",
+        icon: FaFacebook,
+      },
+      {
+        type: "instagram",
+        link: "https://instagram.com/glamourwavesalon",
+        icon: FaInstagram,
+      },
+    ],
   },
   {
     name: "PetalBloom Designs",
@@ -315,10 +339,18 @@ export const eventCompaniesDetails = [
     website: "https://petalbloomdesigns.com",
     email: "contact@petalbloomdesigns.com",
     phoneNumber: "+977-9800000004",
-    socials: {
-      facebook: "https://facebook.com/petalbloomdesigns",
-      instagram: "https://instagram.com/petalbloomdesigns",
-    },
+    socials: [
+      {
+        type: "facebook",
+        link: "https://facebook.com/petalbloomdesigns",
+        icon: FaFacebook,
+      },
+      {
+        type: "instagram",
+        link: "https://instagram.com/petalbloomdesigns",
+        icon: FaInstagram,
+      },
+    ],
   },
   {
     name: "SweetCrave Bakery",
@@ -354,9 +386,17 @@ export const eventCompaniesDetails = [
     website: "https://sweetcravebakery.com",
     email: "orders@sweetcravebakery.com",
     phoneNumber: "+977-9800000005",
-    socials: {
-      facebook: "https://facebook.com/sweetcravebakery",
-      instagram: "https://instagram.com/sweetcravebakery",
-    },
+    socials: [
+      {
+        type: "facebook",
+        link: "https://facebook.com/sweetcravebakery",
+        icon: FaFacebook,
+      },
+      {
+        type: "instagram",
+        link: "https://instagram.com/sweetcravebakery",
+        icon: FaInstagram,
+      },
+    ],
   },
 ];
