@@ -4,6 +4,7 @@ import Button from "./Button";
 import Heading from "./Heading";
 import ReviewModal, { ReviewData } from "./ReviewModal";
 import { FaStar } from "react-icons/fa";
+import toast from "react-hot-toast";
 
 // Define the shape of each review
 interface Review {
@@ -39,6 +40,7 @@ const Review = ({ company }: ReviewProps) => {
     };
     // Add the new review to the existing reviews
     setReviews((prevReviews) => [...prevReviews, newReview]);
+    toast.success("Review added!");
     console.log("Review submitted:", reviewData);
   };
 
