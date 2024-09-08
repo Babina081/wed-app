@@ -22,6 +22,7 @@ interface ReviewProps {
 
 const Review = ({ company }: ReviewProps) => {
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const [reviews, setReviews] = useState(company.reviews);
 
   const handleOpenModal = () => setIsModalOpen(true);
   const handleCloseModal = () => setIsModalOpen(false);
@@ -29,19 +30,26 @@ const Review = ({ company }: ReviewProps) => {
   const handleSubmitReview = (reviewData: ReviewData) => {
     console.log("Review submitted:", reviewData);
     // Here you can add logic to submit the review data to a server
-    const transformedReview: Review = {
+    const newReview: Review = {
       user: reviewData.name,
       comment: reviewData.message,
     };
-    console.log("Transformed review:", transformedReview);
+    // Add the new review to the existing reviews
+    setReviews((prevReviews) => [...prevReviews, newReview]);
+    console.log("Review submitted:", reviewData);
   };
 
   return (
     <div id="reviews" className="flex flex-col gap-4 bg-slate-300/10 p-4 mt-4">
-      <Heading>Recommendations and Reviews</Heading>
+      <div className="flex items-center justify-between">
+        <Heading>Recommendations and Reviews</Heading>
+        <div>
+          <span className="font-bold text-lg">{reviews.length}</span> Reviews
+        </div>
+      </div>
       {company.reviews && company.reviews.length > 0 ? (
         <ul className="space-y-4">
-          {company.reviews.map((review, index) => (
+          {reviews.map((review, index) => (
             <li key={index} className="border p-4 rounded-lg">
               <p className="font-semibold">{review.user}</p>
               <p>{review.comment}</p>
