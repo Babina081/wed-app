@@ -49,7 +49,7 @@ const ServicePage = () => {
         </ul>
       </div>
 
-      <ul className="grid grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-4 w-full mt-4">
+      <ul className="grid sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-4 w-full mt-4">
         {eventCompanies
           // Filter by dynamic service instead of hardcoded "Photographers"
           .filter(

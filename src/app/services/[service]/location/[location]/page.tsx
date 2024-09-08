@@ -45,15 +45,21 @@ const LocationPage = () => {
 
   return (
     <section className="flex flex-col py-10 px-10 items-center justify-center gap-4 relative">
-      <Heading>
-        Listing {displayService} in {displayLocation} Nepal
-      </Heading>
-      <div className="absolute top-10 left-10 ">
-        <Button color="red" onClick={() => router.push(`/services/${service}`)}>
-          <span className="flex gap-2 items-center justify-center">
-            <IoMdArrowRoundBack /> Show All {displayService}
-          </span>
-        </Button>
+      <div className="grid sm:grid-cols-2 lg:grid-cols-3  gap-4 w-full mt-4 text-center xl:text-left  ">
+        <div className=" ">
+          <Button
+            color="red"
+            onClick={() => router.push(`/services/${service}`)}
+          >
+            <span className="flex gap-2 items-center justify-center">
+              <IoMdArrowRoundBack /> Show All {displayService}
+            </span>
+          </Button>
+        </div>
+        <Heading>
+          Listing {displayService} in {displayLocation} Nepal
+        </Heading>
+        <div></div>
       </div>
       <div className="flex gap-2 items-center justify-center">
         {filteredCompanies.length > 0 ? (
@@ -78,7 +84,7 @@ const LocationPage = () => {
         )}
       </div>
 
-      <ul className="grid grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-4 w-full mt-4">
+      <ul className="grid sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-4 w-full mt-4">
         {filteredCompanies.length > 0 ? (
           filteredCompanies.map((company) => (
             <Link
