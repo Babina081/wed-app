@@ -40,7 +40,7 @@ const Banner = () => {
         <select
           value={selectedCategory}
           onChange={(e) => setSelectedCategory(e.target.value)}
-          className="inline-block w-full border  rounded-lg "
+          className="border p-2  rounded-lg "
         >
           {categories.map((category) => (
             <option key={category} value={category}>
