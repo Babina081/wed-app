@@ -3,11 +3,13 @@ import React, { useState } from "react";
 import Button from "./Button";
 import Heading from "./Heading";
 import ReviewModal, { ReviewData } from "./ReviewModal";
+import { FaStar } from "react-icons/fa";
 
 // Define the shape of each review
 interface Review {
   user: string;
   comment: string;
+  rating: number;
 }
 
 // Define the shape of the company prop
@@ -33,6 +35,7 @@ const Review = ({ company }: ReviewProps) => {
     const newReview: Review = {
       user: reviewData.name,
       comment: reviewData.message,
+      rating: reviewData.rating,
     };
     // Add the new review to the existing reviews
     setReviews((prevReviews) => [...prevReviews, newReview]);
@@ -51,7 +54,15 @@ const Review = ({ company }: ReviewProps) => {
         <ul className="space-y-4">
           {reviews.map((review, index) => (
             <li key={index} className="border p-4 rounded-lg">
-              <p className="font-semibold">{review.user}</p>
+              <div className="flex items-center gap-2 justify-between">
+                <p className="font-semibold">{review.user}</p>
+                {review.rating && (
+                  <div className="bg-gray-600 px-2 rounded-lg flex items-center justify-center  gap-1 text-yellow-500">
+                    <span className=" font-bold">{review.rating}</span>
+                    <FaStar />
+                  </div>
+                )}
+              </div>
               <p>{review.comment}</p>
               <p className="text-sm text-gray-500">12 May 2024</p>
             </li>

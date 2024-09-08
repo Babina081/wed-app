@@ -8,7 +8,7 @@ import React, { useEffect, useState } from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import { FaHeart, FaRegCheckSquare, FaRegHeart } from "react-icons/fa";
+import { FaHeart, FaRegCheckSquare, FaRegHeart, FaStar } from "react-icons/fa";
 import { useDispatch, useSelector } from "react-redux";
 import { add, selectFavorites } from "@/redux/features/favoriteSlice";
 import toast from "react-hot-toast";
@@ -83,6 +83,13 @@ const ServiceIdPage = () => {
     } else {
       toast.error(`${company.name} is already in your favorites.`);
     }
+  };
+
+  // Function to calculate average rating
+  const calculateAverageRating = (reviews: Review[]) => {
+    if (reviews.length === 0) return 0;
+    const totalRating = reviews.reduce((acc, review) => acc + review.rating, 0);
+    return (totalRating / reviews.length).toFixed(1); // 1 decimal point
   };
 
   return (
@@ -165,15 +172,21 @@ const ServiceIdPage = () => {
                   </ul>
                   <div className="w-full h-1 bg-slate-500 my-2"></div>
                 </div>
-                <Review company={company} ></Review>
+                <Review company={company}></Review>
               </div>
-              <div className="col-span-1 bg-slate-300/10 p-4 hidden md:flex flex-col items-center justify-start gap-2 h-min sticky top-20">
+              <div className="col-span-1 bg-slate-300/10 p-4 hidden md:flex flex-col items-center justify-start gap-2 h-min sticky top-20 ">
                 <img
                   src="https://picsum.photos/200"
                   alt=""
                   className="rounded-full border border-black object-cover"
                 />
                 <Heading>{company.name}</Heading>
+                <div className="bg-gray-600 px-2 rounded-lg flex items-center justify-center  gap-1 text-yellow-500 absolute top-4 right-4">
+                  <span className=" font-bold">
+                    {calculateAverageRating(company.reviews)}
+                  </span>
+                  <FaStar />
+                </div>
                 <p>{company.location}</p>
                 <a href={company.website} className="text-blue-400">
                   {company.website}
