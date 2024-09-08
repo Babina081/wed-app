@@ -131,7 +131,7 @@ const Navbar = () => {
               />
             </button>
             {dropdownOpen && (
-              <ul className="flex flex-col  absolute left-0 w-40  rounded-lg bg-white justify-center overflow-hidden z-20 mt-2">
+              <ul className="flex flex-col  absolute left-0 w-40  rounded-lg bg-white justify-center overflow-hidden z-20 mt-2 border border-black/30">
                 {eventServices.map((service) => (
                   <li
                     key={service.name}
