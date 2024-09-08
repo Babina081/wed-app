@@ -51,7 +51,7 @@ export const eventServices = [
 export const spotlightServices = [
   {
     name: "Fotos Factory",
-    category: "Photographers & Videographers",
+    category: "Photographers",
     location: "Dhalku, Kathmandu",
     tags: [
       { label: "BEST PRICE", icon: FaDollarSign },
@@ -111,51 +111,61 @@ export const eventCompanies = [
     name: "LensCraft Studios",
     category: "Photographers",
     location: "Pokhara",
+    isFeatured: true,
   },
   {
     name: "MotionFrame Films",
     category: "Videographers",
     location: "Kathmandu",
+    isFeatured: false,
   },
   {
     name: "GlamourWave Salon",
     category: "Hair and Beauty",
     location: "Butwal",
+    isFeatured: true,
   },
   {
     name: "Elegance Couture",
     category: "Boutiques",
     location: "Kathmandu",
+    isFeatured: false,
   },
   {
     name: "PetalBloom Designs",
     category: "Florists",
     location: "Pokhara",
+    isFeatured: true,
   },
   {
     name: "SweetCrave Bakery",
     category: "Cakes and Bakeries",
     location: "Butwal",
+    isFeatured: false,
   },
   {
     name: "Serenity Halls",
     category: "Venues",
     location: "Kathmandu",
+    isFeatured: true,
   },
   {
     name: "Elite Events Co.",
     category: "Event Planners",
     location: "Pokhara",
+    isFeatured: false,
   },
   {
     name: "JourneyMasters Travel",
     category: "Travel Experts",
     location: "Butwal",
+    isFeatured: true,
   },
   {
     name: "JourneyMasters Travel",
     category: "Photographers",
     location: "Butwal",
+    isFeatured: false,
   },
 ];
 
