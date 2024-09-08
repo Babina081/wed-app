@@ -36,7 +36,7 @@ const Banner = () => {
         artists, event planners and more
       </p>
       {/* Search bar */}
-      <div className="mt-4 flex gap-2 ">
+      <div className="mt-4 flex flex-col md:flex-row gap-2 ">
         <select
           value={selectedCategory}
           onChange={(e) => setSelectedCategory(e.target.value)}
