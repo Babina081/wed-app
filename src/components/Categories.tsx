@@ -1,9 +1,8 @@
 "use client";
-import React, { useEffect, useState } from "react";
-import Heading from "./Heading";
 import { eventServices } from "@/utils/data";
 import Link from "next/link";
-import LoadingSpinner from "./LoadingSpinner";
+import { useEffect, useState } from "react";
+import Heading from "./Heading";
 
 // Define the type for the event services (assuming it has name and imageUrl)
 interface EventService {
