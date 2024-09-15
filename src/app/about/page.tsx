@@ -44,6 +44,7 @@ const AboutPage = () => {
       </p>
       <Button onClick={openDialog}>Register</Button>
       {isDialogOpen && <RegisterModal onClose={closeDialog} />}
+     
     </section>
   );
 };

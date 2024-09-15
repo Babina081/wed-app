@@ -1,14 +1,36 @@
 "use client";
-import React, { useState } from "react";
-import Heading from "./Heading";
-import Button from "./Button";
+import { useState } from "react";
+import { SubmitHandler, useForm } from "react-hook-form";
 import { ImCancelCircle } from "react-icons/im";
+import Button from "./Button";
+import Heading from "./Heading";
+
+// Define the type for the form data
+interface FormData {
+  companyName: string;
+  yourName: string;
+  email: string;
+  facebookPage?: string;
+  details: string;
+}
 
 export const RegisterModal = ({ onClose }: { onClose: () => void }) => {
+  // Use React Hook Form
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+  } = useForm<FormData>();
+
+  // Handle form submission
+  const onSubmit: SubmitHandler<FormData> = (data) => {
+    console.log(data); // Replace this with your form submission logic
+    onClose();
+  };
   return (
     <div className="fixed inset-0 flex items-center justify-center bg-gray-900 bg-opacity-50 z-50">
       <div className="bg-white p-6 rounded-lg shadow-lg max-w-lg w-full relative">
-        <h2 className="text-2xl font-semibold mb-4 sintony-bold ">
+        <h2 className="text-xl  mb-4 text-center">
           Register With Us
         </h2>
         <button
@@ -17,62 +39,91 @@ export const RegisterModal = ({ onClose }: { onClose: () => void }) => {
         >
           <ImCancelCircle size={24} />
         </button>
-        <form>
+        <form onSubmit={handleSubmit(onSubmit)}>
           <div className="mb-4">
-            <label htmlFor="companyName" className="block text-gray-700 mb-1">
+            <label className="block text-sm  mb-1 text-left">
               Service/Company Name*
             </label>
             <input
               type="text"
-              id="companyName"
-              required
+              {...register("companyName", {
+                required: "Company name is required",
+              })}
               className="border border-gray-300 p-2 w-full rounded-lg"
             />
+            {errors.companyName && (
+              <p className="text-red-500 text-xs mt-1 text-right">
+                {errors.companyName.message}
+              </p>
+            )}
           </div>
           <div className="mb-4">
-            <label htmlFor="yourName" className="block text-gray-700 mb-1">
+            <label className="block text-sm  mb-1 text-left">
               Your Name*
             </label>
             <input
               type="text"
-              id="yourName"
-              required
+              {...register("yourName", { required: "Your name is required" })}
               className="border border-gray-300 p-2 w-full rounded-lg"
             />
+            {errors.yourName && (
+              <p className="text-red-500 text-xs mt-1 text-right">
+                {errors.yourName.message}
+              </p>
+            )}
           </div>
           <div className="mb-4">
-            <label htmlFor="email" className="block text-gray-700 mb-1">
+            <label className="block text-sm  mb-1 text-left">
               Contact Email*
             </label>
             <input
               type="email"
-              id="email"
-              required
+              {...register("email", {
+                pattern: {
+                  value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i,
+                  message: "Invalid email address",
+                },
+                required: "Email is required",
+              })}
               className="border border-gray-300 p-2 w-full rounded-lg"
             />
+            {errors.email && (
+              <p className="text-red-500 text-xs mt-1 text-right">
+                {errors.email.message}
+              </p>
+            )}
           </div>
           <div className="mb-4">
-            <label htmlFor="facebookPage" className="block text-gray-700 mb-1">
+            <label className="block text-sm  mb-1 text-left">
               Facebook Page
             </label>
             <input
               type="url"
-              id="facebookPage"
+              {...register("facebookPage")}
               className="border border-gray-300 p-2 w-full rounded-lg"
             />
           </div>
           <div className="mb-4">
-            <label htmlFor="details" className="block text-gray-700 mb-1">
+            <label className="block text-sm  mb-1 text-left">
               Details*
             </label>
             <textarea
-              id="details"
-              required
+              {...register("details", { required: "Details are required" })}
               rows={4}
               className="border border-gray-300 p-2 w-full rounded-lg"
             ></textarea>
+            {errors.details && (
+              <p className="text-red-500 text-xs mt-1 text-right">
+                {errors.details.message}
+              </p>
+            )}
           </div>
-          <Button>Submit</Button>
+          <div className="flex justify-end gap-2">
+            <Button color="blue">Submit</Button>
+            <Button onClick={onClose} color="red">
+              Cancel
+            </Button>
+          </div>
         </form>
       </div>
     </div>
