@@ -36,7 +36,7 @@ const ServicePage = () => {
   );
 
   return (
-    <section className="flex flex-col py-10 px-10 items-center justify-center gap-4">
+    <section className="flex flex-col py-10 px-10 items-center justify-center gap-4 h-full">
       <Heading>Listing {displayService} in Nepal</Heading>
       <div className="flex gap-2 items-center justify-center">
         <h1 className="amiko-regular ">Location:</h1>
@@ -45,7 +45,9 @@ const ServicePage = () => {
             href={`/services/${service}`}
             onClick={() => handleLocationSelect(null)}
             className={`border rounded-lg list-none gap-2 py-1 px-4 hover:bg-gray-300 transition-all duration-300 ease-out cookie-regular text-xl  ${
-              selectedLocation === null ? "bg-yellow-300 hover:bg-yellow-300" : ""
+              selectedLocation === null
+                ? "bg-yellow-300 hover:bg-yellow-300"
+                : ""
             }`}
           >
             All

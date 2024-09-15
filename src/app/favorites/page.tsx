@@ -20,8 +20,8 @@ const FavoritePage = () => {
   };
   return (
     <section
-      className="py-20
-   px-10 flex items-center  flex-col bg-purple-100/40 gap-4"
+      className="py-10
+   px-10 flex items-center justify-center flex-col  gap-4 h-full"
     >
       <Heading>My Favorite Shortlisted</Heading>
       <ul className="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 mx-auto w-full  ">
@@ -37,7 +37,10 @@ const FavoritePage = () => {
                 className="rounded-lg w-full object-cover"
               />
               <Heading>{favorite.name}</Heading>
-              <p className=" text-red-600 cookie-regular text-xl">  {decodeURIComponent(favorite.service)}</p>{" "}
+              <p className=" text-red-600 cookie-regular text-xl">
+                {" "}
+                {decodeURIComponent(favorite.service)}
+              </p>{" "}
               {/* Replace with actual data if available */}
               <p className="text-sm text-gray-600 amiko-regular">
                 {favorite.location}
