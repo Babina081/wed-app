@@ -18,10 +18,10 @@ const Featured = () => {
             <Link
               href={`/services/${company.category}/${company.name}`}
               key={company.name}
-              className="border p-3 rounded-lg gap-2 flex items-center flex-col hover:bg-slate-500/15 transition-all duration-300 ease-in-out cursor-pointer relative"
+              className="border p-3 rounded-lg gap-2 flex items-center flex-col hover:bg-slate-500/15 transition-all duration-300 ease-in-out cursor-pointer relative  shadow-lg"
             >
               {company.isFeatured && (
-                <div className="absolute top-5 left-0  bg-yellow-200 text-black p-2 rounded-r-lg font-bold text-lg ">
+                <div className="absolute top-5 left-0  bg-yellow-200 text-black p-2 rounded-r-full px-4 font-bold text-lg cookie-regular border-r border-yellow-700/20 drop-shadow-lg">
                   Featured
                 </div>
               )}
@@ -31,7 +31,7 @@ const Featured = () => {
                 className="w-full h-full object-cover rounded-lg"
               />
               <Heading>{company.name}</Heading>
-              <p>{company.location}</p>
+              <p className="text-sm text-gray-600 amiko-regular">{company.location}</p>
             </Link>
           ))}
       </div>

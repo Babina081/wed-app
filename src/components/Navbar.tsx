@@ -30,7 +30,7 @@ const Navbar = () => {
   // Function to check if the link is active
   const isActive = (href: string) => {
     return pathname === href
-      ? "text-white bg-black p-2 rounded-lg"
+      ? "text-white bg-purple-600 p-2 rounded-lg hover:no-underline"
       : "text-black";
   };
 
@@ -52,18 +52,26 @@ const Navbar = () => {
         </div>
         {isOpen && (
           <ul
-            className=" absolute top-16 left-0 right-0  flex md:hidden flex-col gap-4 bg-purple-300 z-20 px-10 pb-4 
+            className=" absolute top-16 left-0 right-0  flex md:hidden flex-col gap-4 bg-purple-300 z-20 px-10 pb-4 amiko-bold 
           "
           >
             <li>
-              <Link href="/" className={isActive("/")} onClick={closeMenu}>
+              <Link
+                href="/"
+                className={`${isActive(
+                  "/"
+                )} hover:underline underline-offset-4 transition-all duration-300 ease-in-out`}
+                onClick={closeMenu}
+              >
                 Home
               </Link>
             </li>
             <li>
               <Link
                 href="/about"
-                className={isActive("/about")}
+                className={`${isActive(
+                  "/about"
+                )} hover:underline underline-offset-4 transition-all duration-300 ease-in-out`}
                 onClick={closeMenu}
               >
                 About
@@ -74,7 +82,7 @@ const Navbar = () => {
                 onClick={handleDropdownToggle}
                 className={`w-full text-left ${isActive(
                   "/services"
-                )} flex items-center justify-start`}
+                )} flex items-center justify-start hover:underline underline-offset-4 transition-all duration-300 ease-in-out`}
               >
                 Services
                 <FaCaretDown
@@ -104,12 +112,14 @@ const Navbar = () => {
             <li>
               <Link
                 href="/favorites"
-                className={isActive("/favorites")}
+                className={`${isActive("/favorites")}`}
                 onClick={closeMenu}
               >
-                Favorites{" "}
+                <span className=" hover:underline underline-offset-4 transition-all duration-300 ease-in-out">
+                  Favorites
+                </span>
                 {favoriteCount > 0 && (
-                  <span className="px-2 py-1 bg-yellow-200 rounded-full ml-2">
+                  <span className="px-2 py-1 bg-yellow-200 rounded-full ml-2 hover:no-underline">
                     {favoriteCount}
                   </span>
                 )}
@@ -118,7 +128,9 @@ const Navbar = () => {
             <li>
               <Link
                 href="/blogs"
-                className={isActive("/blogs")}
+                className={`${isActive(
+                  "/blogs"
+                )} hover:underline underline-offset-4 transition-all duration-300 ease-in-out`}
                 onClick={closeMenu}
               >
                 Blogs
@@ -126,14 +138,24 @@ const Navbar = () => {
             </li>
           </ul>
         )}
-        <ul className="hidden md:flex flex-row gap-4 bg-purple-300 justify-center items-center">
+        <ul className="hidden md:flex flex-row gap-4 bg-purple-300 justify-center items-center amiko-bold">
           <li>
-            <Link href="/" className={isActive("/")}>
+            <Link
+              href="/"
+              className={`${isActive(
+                "/"
+              )} hover:underline underline-offset-4 transition-all duration-300 ease-in-out`}
+            >
               Home
             </Link>
           </li>
           <li>
-            <Link href="/about" className={isActive("/about")}>
+            <Link
+              href="/about"
+              className={`${isActive(
+                "/about"
+              )}   hover:underline underline-offset-4 transition-all duration-300 ease-in-out`}
+            >
               About
             </Link>
           </li>
@@ -142,7 +164,7 @@ const Navbar = () => {
               onClick={handleDropdownToggle}
               className={`w-full text-left ${isActive(
                 "/services"
-              )} flex items-center justify-center`}
+              )} flex items-center justify-center hover:underline underline-offset-4 transition-all duration-300 ease-in-out`}
             >
               Services
               <FaCaretDown
@@ -167,17 +189,24 @@ const Navbar = () => {
             )}
           </li>
           <li>
-            <Link href="/favorites" className={isActive("/favorites")}>
-              Favorites
+            <Link href="/favorites" className={`${isActive("/favorites")}`}>
+              <span className=" hover:underline underline-offset-4 transition-all duration-300 ease-in-out">
+                Favorites
+              </span>
               {favoriteCount > 0 && (
-                <span className="px-2 py-1 bg-yellow-200 rounded-full ml-2">
+                <span className="px-2 py-1 bg-yellow-200 rounded-full ml-2 hover:no-underline">
                   {favoriteCount}
                 </span>
               )}
             </Link>
           </li>
           <li>
-            <Link href="/blogs" className={isActive("/blogs")}>
+            <Link
+              href="/blogs"
+              className={`${isActive(
+                "/blogs"
+              )} hover:underline underline-offset-4 transition-all duration-300 ease-in-out`}
+            >
               Blogs
             </Link>
           </li>

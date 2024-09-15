@@ -28,7 +28,7 @@ const Button = ({
       onClick={disabled ? undefined : onClick}
       className={`${colorClasses[color]} ${
         disabled ? disabledClasses : ""
-      } font-bold py-2 px-10 rounded-lg transition-all duration-300 ease-in-out`}
+      } font-bold py-2 px-10 rounded-lg transition-all duration-300 ease-in-out sintony-bold   `}
       disabled={disabled}
     >
       {children}

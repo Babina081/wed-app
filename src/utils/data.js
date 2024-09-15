@@ -418,8 +418,13 @@ export const eventCompaniesDetails = [
       },
     ],
     isFav: false,
-    missionDescription: "To provide high-quality photography services that capture the essence of every moment.",
-    services: ["Event Photography", "Portrait Photography", "Commercial Photography"],
+    missionDescription:
+      "To provide high-quality photography services that capture the essence of every moment.",
+    services: [
+      "Event Photography",
+      "Portrait Photography",
+      "Commercial Photography",
+    ],
     images: [
       "https://picsum.photos/300/200?random=4",
       "https://picsum.photos/300/200?random=5",
@@ -502,7 +507,8 @@ export const eventCompaniesDetails = [
       },
     ],
     isFav: false,
-    missionDescription: "Turning events into magical moments with beautiful decor.",
+    missionDescription:
+      "Turning events into magical moments with beautiful decor.",
     services: ["Wedding Decor", "Event Setup", "Custom Designs"],
     images: [
       "https://picsum.photos/300/200?random=10",

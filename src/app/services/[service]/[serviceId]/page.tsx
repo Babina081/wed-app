@@ -116,7 +116,9 @@ const ServiceIdPage = () => {
             <div className="flex   justify-between items-center mt-7">
               <div className="flex flex-col ">
                 <Heading>{company.name}</Heading>
-                <p className="text-red-500">{company.category}</p>
+                <p className="text-red-500 cookie-regular  text-2xl">
+                  {company.category}
+                </p>
               </div>
               <div className="flex flex-col md:flex-row gap-2 ">
                 <Link href={`/services/${company.name}/${serviceId}/#reviews`}>
@@ -153,17 +155,19 @@ const ServiceIdPage = () => {
             <div className="grid  grid-cols-3 gap-4 mt-4">
               <div className="col-span-3 md:col-span-2 gap-4">
                 <div className="bg-slate-300/10 p-4 ">
-                  <p className="tracking-wide mb-4">{company.description}</p>
+                  <p className="tracking-wide mb-4 amiko-regular">
+                    {company.description}
+                  </p>
                   <Heading>Mission</Heading>
-                  <p className="tracking-wide mb-4">
+                  <p className="tracking-wide mb-4 amiko-regular">
                     {company.missionDescription}
                   </p>
                   <div className="w-full h-1 bg-slate-500 my-2"></div>
-                  <ul className="flex flex-col md:flex-row gap-4 my-4">
+                  <ul className="flex flex-col md:flex-row gap-4 my-4 cookie-regular text-lg">
                     {company.services.map((service) => (
                       <li
                         key={service}
-                        className="flex gap-2 items-center justify-center"
+                        className="flex gap-2 items-center justify-center "
                       >
                         <FaRegCheckSquare />
                         {service}
@@ -181,18 +185,21 @@ const ServiceIdPage = () => {
                   className="rounded-full border border-black object-cover"
                 />
                 <Heading>{company.name}</Heading>
-                <div className="bg-gray-600 px-2 rounded-lg flex items-center justify-center  gap-1 text-yellow-500 absolute top-4 right-4">
+                <div className="bg-gray-600 px-2 rounded-lg flex items-center justify-center  gap-1 text-yellow-500 absolute top-4 right-4 drop-shadow-lg">
                   <span className=" font-bold">
                     {calculateAverageRating(company.reviews)}
                   </span>
                   <FaStar />
                 </div>
-                <p>{company.location}</p>
-                <a href={company.website} className="text-blue-400">
+                <p className="cookie-regular text-xl">{company.location}</p>
+                <a
+                  href={company.website}
+                  className="text-blue-400 amiko-regular "
+                >
                   {company.website}
                 </a>
-                <p>Email:{company.email}</p>
-                <p>Phone: {company.phoneNumber}</p>
+                <p className="amiko-regular ">Email:{company.email}</p>
+                <p className="amiko-regular ">Phone: {company.phoneNumber}</p>
                 <ul className="flex gap-2 mb-4">
                   {company.socials.map((social) => (
                     <li

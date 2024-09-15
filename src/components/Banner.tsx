@@ -27,20 +27,20 @@ const Banner = () => {
 
   return (
     <section
-      className="bg-purple-200 h-[60vh] py-4
+      className="bg-gradient-to-b from-purple-200 to-white min-h-[60vh] py-4
    px-10 flex flex-col items-center justify-center text-center"
     >
       <Heading> Lets find a team for your events and celebrations</Heading>
-      <p className="text-xl text-gray-600">
+      <p className="text-2xl text-gray-600 cookie-regular">
         Discover the best photographers, videographers, boutiques, make-up
         artists, event planners and more
       </p>
       {/* Search bar */}
-      <div className="mt-4 flex flex-col md:flex-row gap-2 ">
+      <div className="mt-4 flex flex-col md:flex-row gap-2 amiko-semibold">
         <select
           value={selectedCategory}
           onChange={(e) => setSelectedCategory(e.target.value)}
-          className="border p-2  rounded-lg "
+          className="border p-2  rounded-lg  border-black/10 shadow-sm  "
         >
           {categories.map((category) => (
             <option key={category} value={category}>
@@ -51,7 +51,7 @@ const Banner = () => {
         <select
           value={selectedLocation}
           onChange={(e) => setSelectedLocation(e.target.value)}
-          className="border p-2 rounded-lg"
+          className="border p-2 rounded-lg border-black/10 shadow-sm "
         >
           {locations.map((location) => (
             <option key={location} value={location}>

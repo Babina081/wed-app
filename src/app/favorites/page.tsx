@@ -37,9 +37,11 @@ const FavoritePage = () => {
                 className="rounded-lg w-full object-cover"
               />
               <Heading>{favorite.name}</Heading>
-              <p className="text-sm text-red-600">{favorite.service}</p>{" "}
+              <p className=" text-red-600 cookie-regular text-xl">  {decodeURIComponent(favorite.service)}</p>{" "}
               {/* Replace with actual data if available */}
-              <p className="text-sm text-gray-600">{favorite.location}</p>{" "}
+              <p className="text-sm text-gray-600 amiko-regular">
+                {favorite.location}
+              </p>
               {/* Replace with actual data if available */}
               <div className="flex gap-2 justify-center items-center w-full mt-2">
                 <Button

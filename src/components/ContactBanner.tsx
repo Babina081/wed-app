@@ -8,7 +8,9 @@ export const RegisterModal = ({ onClose }: { onClose: () => void }) => {
   return (
     <div className="fixed inset-0 flex items-center justify-center bg-gray-900 bg-opacity-50 z-50">
       <div className="bg-white p-6 rounded-lg shadow-lg max-w-lg w-full relative">
-        <h2 className="text-2xl font-semibold mb-4">Register With Us</h2>
+        <h2 className="text-2xl font-semibold mb-4 sintony-bold ">
+          Register With Us
+        </h2>
         <button
           className="absolute top-4 right-4 text-gray-600 hover:text-gray-900 flex items-center justify-center"
           onClick={onClose}
@@ -84,9 +86,9 @@ const ContactBanner = () => {
   const closeDialog = () => setIsDialogOpen(false);
 
   return (
-    <section className="h-[40vh] py-4 px-10 flex flex-col items-center justify-center text-center">
+    <section className="h-[60vh] py-4 px-10 flex flex-col items-center justify-center text-center sintony-bold bg-gradient-to-t from-purple-200 to-white">
       <Heading>Are you a Service Provider?</Heading>
-      <p className="text-xl text-gray-600 mb-4">
+      <p className="text-2xl text-gray-600 mb-4 cookie-regular ">
         Contact us to include your service in our listing.
       </p>
       <Button onClick={openDialog}>Register</Button>

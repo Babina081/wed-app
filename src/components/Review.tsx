@@ -5,6 +5,8 @@ import Heading from "./Heading";
 import ReviewModal, { ReviewData } from "./ReviewModal";
 import { FaStar } from "react-icons/fa";
 import toast from "react-hot-toast";
+import Image from "next/image";
+import emptyImage from "@/assets/empty.svg";
 
 // Define the shape of each review
 interface Review {
@@ -46,10 +48,10 @@ const Review = ({ company }: ReviewProps) => {
 
   return (
     <div id="reviews" className="flex flex-col gap-4 bg-slate-300/10 p-4 mt-4">
-      <div className="flex flex-col md:flex-row items-center justify-between gap-2">
+      <div className="flex flex-col md:flex-row items-center justify-between gap-2 ">
         <Heading>Recommendations and Reviews</Heading>
-        <div className="text-right w-full">
-          <span className="font-bold text-lg">{reviews.length}</span> Reviews
+        <div className="text-right w-fit amiko-regular px-2 py-1 border border-black/10 rounded-xl">
+          <span className="font-bold text-lg ">{reviews.length}</span> Reviews
         </div>
       </div>
       {company.reviews && company.reviews.length > 0 ? (
@@ -57,21 +59,28 @@ const Review = ({ company }: ReviewProps) => {
           {reviews.map((review, index) => (
             <li key={index} className="border p-4 rounded-lg">
               <div className="flex items-center gap-2 justify-between">
-                <p className="font-semibold">{review.user}</p>
+                <p className=" amiko-bold">{review.user}</p>
                 {review.rating && (
-                  <div className="bg-gray-600 px-2 rounded-lg flex items-center justify-center  gap-1 text-yellow-500">
+                  <div className="bg-gray-600 px-2 rounded-lg flex items-center justify-center  gap-1 text-yellow-500  shadow-xl ">
                     <span className=" font-bold">{review.rating}</span>
                     <FaStar />
                   </div>
                 )}
               </div>
-              <p>{review.comment}</p>
-              <p className="text-sm text-gray-500">12 May 2024</p>
+              <p className="amiko-regular">{review.comment}</p>
+              <p className="text-xs text-gray-500 amiko-regular">12 May 2024</p>
             </li>
           ))}
         </ul>
       ) : (
-        <p className="text-gray-600">No reviews yet.</p>
+        <div className="col-span-4 text-center  flex items-center flex-col justify-center mt-5">
+          <Image src={emptyImage} alt="empty" className="size-32"></Image>
+          <div className="m-10 ">
+            <span className="text-red-200 border p-2 rounded-lg ">
+              No reviews yet.
+            </span>
+          </div>
+        </div>
       )}
       <Button onClick={handleOpenModal}>Write your own review</Button>
       <ReviewModal

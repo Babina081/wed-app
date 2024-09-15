@@ -3,7 +3,7 @@ import React from "react";
 
 const Footer = () => {
   return (
-    <footer className="bg-purple-300 flex flex-col gap-2 py-10 px-10 items-center justify-center">
+    <footer className="bg-purple-200 flex flex-col gap-2 py-10 px-10 items-center justify-center amiko-bold ">
       <div></div>
       <div>&copy; 2023 Wed-App</div>
       <ul className="flex gap-2">

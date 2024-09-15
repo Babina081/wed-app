@@ -35,14 +35,18 @@ const Spotlight = () => {
                     alt={spotlight.name}
                     className="w-full h-full   object-cover rounded-lg"
                   />
-                  <div className="h-10 w-10 rounded-full p-2 bg-white border-2  border-black flex items-center justify-center absolute right-5 -bottom-5 z-0">
+                  <div className="h-10 w-10 rounded-full p-2 bg-white border-2  border-black flex items-center justify-center absolute right-5 -bottom-5 z-0 cookie-regular">
                     {spotlight.rank}
                   </div>
                 </div>
                 <Heading>{spotlight.name}</Heading>
-                <p className="text-sm text-red-600">{spotlight.category}</p>
-                <p className="text-sm text-gray-600">{spotlight.location}</p>
-                <ul className="w-full grid  grid-cols-2 gap-2">
+                <p className="text-xl text-red-600 cookie-regular">
+                  {spotlight.category}
+                </p>
+                <p className="text-sm text-gray-600 amiko-regular">
+                  {spotlight.location}
+                </p>
+                <ul className="w-full grid  grid-cols-2 gap-2 amiko-regular">
                   {spotlight.tags.map((tag) => (
                     <li
                       key={tag.label}
