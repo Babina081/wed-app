@@ -13,13 +13,13 @@ px-10 flex items-center justify-center flex-col h-screen"
       <p className="text-2xl text-gray-600 cookie-regular">
         Hear from our happy clients
       </p>
-      <div className=" rounded-md flex flex-col antialiased  items-center justify-center relative overflow-hidden">
-        <InfiniteMovingCards
-          items={testimonials}
-          direction="right"
-          speed="slow"
-        />
-      </div>
+      {/* <div className=" rounded-md flex flex-col antialiased  items-center justify-center relative overflow-hidden"> */}
+      <InfiniteMovingCards
+        items={testimonials}
+        direction="right"
+        speed="slow"
+      />
+      {/* </div> */}
     </section>
   );
 };

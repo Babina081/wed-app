@@ -1,6 +1,7 @@
 "use client";
 
 import { cn } from "@/lib/utils";
+import Image from "next/image";
 import React, { useEffect, useState } from "react";
 
 export const InfiniteMovingCards = ({
@@ -74,14 +75,14 @@ export const InfiniteMovingCards = ({
     <div
       ref={containerRef}
       className={cn(
-        "scroller relative   max-w-7xl overflow-hidden  [mask-image:linear-gradient(to_right,transparent,white_20%,white_80%,transparent)]",
+        "scroller relative  max-w-sm sm:max-w-3xl lg:max-w-7xl overflow-hidden [mask-image:linear-gradient(to_right,transparent,white_20%,white_80%,transparent)] px-10",
         className
       )}
     >
       <ul
         ref={scrollerRef}
         className={cn(
-          " flex min-w-full shrink-0 gap-4 py-4 w-max flex-nowrap bg-red-400",
+          " flex min-w-full shrink-0 gap-4 py-4 w-max flex-nowrap ",
           start && "animate-scroll ",
           pauseOnHover && "hover:[animation-play-state:paused]"
         )}
@@ -95,10 +96,12 @@ export const InfiniteMovingCards = ({
             key={item.clientName}
           >
             <div className="flex justify-center items-center mb-4">
-              <img
+              <Image
                 src={item.image}
                 alt={item.clientName}
-                className="w-24 h-24 rounded-full border border-black/10 mr-3"
+                width={200}
+                height={200}
+                className="w-16 h-16 sm:w-24 sm:h-24 rounded-full border border-black/10 mr-3"
               />
             </div>
             <blockquote className="flex-grow relative">
@@ -106,15 +109,15 @@ export const InfiniteMovingCards = ({
                 aria-hidden="true"
                 className="user-select-none -z-1 pointer-events-none absolute -left-0.5 -top-0.5 h-[calc(100%_+_4px)] w-[calc(100%_+_4px)]"
               ></div>
-              <span className=" relative z-20 text-sm leading-[1.6] text-gray-600 font-normal amiko-regular">
+              <span className=" relative z-20 text-xs tracking-tighter sm:text-sm leading-[1.6] text-gray-600 font-normal amiko-regular">
                 {item.testimonial}
               </span>
             </blockquote>
             <div className="absolute bottom-4 right-4 flex flex-col text-right z-20">
-              <span className="text-lg text-black font-bold sintony-bold">
+              <span className="text-sm sm:text-lg text-black font-bold sintony-bold">
                 {item.clientName}
               </span>
-              <span className="text-xl text-black font-normal cookie-regular">
+              <span className="text-sm sm:text-xl text-black font-normal cookie-regular">
                 {item.companyName}
               </span>
             </div>
