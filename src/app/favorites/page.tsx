@@ -7,6 +7,8 @@ import { useRouter } from "next/navigation";
 import React from "react";
 import toast from "react-hot-toast";
 import { useDispatch, useSelector } from "react-redux";
+import emptyImage from "@/assets/empty.svg";
+import Image from "next/image";
 
 const FavoritePage = () => {
   const router = useRouter();
@@ -64,7 +66,8 @@ const FavoritePage = () => {
             </li>
           ))
         ) : (
-          <div className="col-span-4 text-center ">
+          <div className="col-span-4 text-center  flex items-center flex-col justify-center">
+            <Image src={emptyImage} alt="empty" className="size-32"></Image>
             <div className="m-10 ">
               <span className="text-red-200 border p-2 rounded-lg ">
                 No favorites yet.
