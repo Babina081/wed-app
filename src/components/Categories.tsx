@@ -52,7 +52,7 @@ const Categories = () => {
             .map((_, index) => <SkeletonCard key={index} />)
         ) : (
           <>
-            {eventServices.map((category) => (
+            {eventServices.map((category: EventService) => (
               <Link
                 href={`/services/${category.name}`}
                 key={category.name}
