@@ -59,7 +59,7 @@ const AboutPage = () => {
         <Image
           src={wed2}
           alt="wed2"
-          className=" object-cover rounded-xl border border-black/10 w-full md:w-1/2 order-2  h-[50vh]"
+          className=" object-cover rounded-xl border border-black/10 w-full md:w-1/2 order-2  "
           data-aos="zoom-in-right"
         />
         <div className="w-full md:w-1/2 text-left md:text-right order-1 md:order-2">
