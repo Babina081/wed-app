@@ -1,4 +1,4 @@
-import { socialMediaLinks } from "@/utils/data";
+import { socialMediaLinks } from "@/data/data";
 import React from "react";
 
 const Footer = () => {

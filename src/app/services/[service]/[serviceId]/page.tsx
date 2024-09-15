@@ -1,7 +1,7 @@
 "use client";
 import Button from "@/components/Button";
 import Heading from "@/components/Heading";
-import { eventCompaniesDetails } from "@/utils/data";
+import { eventCompaniesDetails } from "@/data/data";
 import Link from "next/link";
 import { useParams, useRouter } from "next/navigation";
 import React, { useEffect, useState } from "react";

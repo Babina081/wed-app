@@ -1,7 +1,7 @@
 "use client";
 import React, { useEffect, useState } from "react";
 import Heading from "./Heading";
-import { spotlightServices } from "@/utils/data";
+import { spotlightServices } from "@/data/data";
 import Link from "next/link";
 import LoadingSpinner from "./LoadingSpinner";
 
@@ -15,7 +15,7 @@ const Spotlight = () => {
   return (
     <section
       className="py-20
-   px-10 flex items-center justify-center flex-col bg-purple-100/40"
+   px-10 flex items-center justify-center flex-col bg-purple-100/40 h-screen"
     >
       <Heading>In the Spotlight</Heading>
       <div className="grid sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-4 w-full mt-4">

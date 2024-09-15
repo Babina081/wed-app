@@ -532,3 +532,49 @@ export const eventCompaniesDetails = [
     ],
   },
 ];
+
+// testimonials
+export const testimonials = [
+  {
+    clientName: "Sita Rai",
+    companyName: "Himalaya Weddings",
+    testimonial:
+      "Babina’s event management app made our wedding planning stress-free. From guest list management to vendor coordination, everything was perfectly organized through the platform. Our big day went smoothly, and we couldn’t have asked for a better experience.",
+    image: "https://picsum.photos/200?random=1",
+  },
+  {
+    clientName: "Rajesh Kumar",
+    companyName: "Nepal Event Planners",
+    testimonial:
+      "The web app Babina built for us played a vital role in organizing our corporate party. We were able to manage RSVPs, seating arrangements, and even live updates on the day of the event. It was a major success thanks to her work!",
+    image: "https://picsum.photos/200?random=2",
+  },
+  {
+    clientName: "Anita Sharma",
+    companyName: "Everest Design Studio",
+    testimonial:
+      "Our annual seminar went off without a hitch thanks to the event app Babina developed. It allowed us to streamline registrations, provide real-time schedules, and facilitate Q&A sessions. Both the attendees and speakers were impressed with the seamless experience.",
+    image: "https://picsum.photos/200?random=3",
+  },
+  {
+    clientName: "Binod Thapa",
+    companyName: "Kathmandu Innovations",
+    testimonial:
+      "The commercial expo we organized was a huge success, largely due to Babina’s web platform. It handled exhibitor registrations, ticketing, and attendee engagement flawlessly. We’re grateful for her expertise in making the event a success.",
+    image: "https://picsum.photos/200?random=4",
+  },
+  {
+    clientName: "Pratik Shrestha",
+    companyName: "Nepal Wedding Events",
+    testimonial:
+      "The wedding app Babina developed was a game-changer. We could manage everything from guest lists to catering services in one place. Our clients loved how easy it was to stay on top of things, and the wedding day went off perfectly!",
+    image: "https://picsum.photos/200?random=5",
+  },
+  {
+    clientName: "Manisha Tamang",
+    companyName: "Party & Event Creations",
+    testimonial:
+      "Our New Year's Eve party was a hit, thanks to the web app Babina built. It allowed guests to RSVP, view event details, and check-in seamlessly. It made the whole event much easier to manage and enjoy.",
+    image: "https://picsum.photos/200?random=6",
+  },
+];

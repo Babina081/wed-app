@@ -1,5 +1,5 @@
 "use client";
-import { eventServices } from "@/utils/data";
+import { eventServices } from "@/data/data";
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import Heading from "./Heading";

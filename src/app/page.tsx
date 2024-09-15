@@ -3,6 +3,7 @@ import Categories from "@/components/Categories";
 import ContactBanner from "@/components/ContactBanner";
 import Featured from "@/components/Featured";
 import Spotlight from "@/components/Spotlight";
+import Testimonials from "@/components/Testimonials";
 
 export default function Home() {
   return (
@@ -11,6 +12,7 @@ export default function Home() {
       <Categories></Categories>
       <Spotlight></Spotlight>
       <Featured></Featured>
+      <Testimonials></Testimonials>
       <ContactBanner></ContactBanner>
     </>
   );

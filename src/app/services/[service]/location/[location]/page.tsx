@@ -1,6 +1,6 @@
 "use client";
 import Heading from "@/components/Heading";
-import { eventCompanies } from "@/utils/data";
+import { eventCompanies } from "@/data/data";
 import Link from "next/link";
 import { useParams } from "next/navigation";
 import emptyImage from "@/assets/empty.svg";

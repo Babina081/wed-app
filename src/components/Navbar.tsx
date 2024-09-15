@@ -4,7 +4,7 @@ import { usePathname } from "next/navigation";
 import React, { useState } from "react";
 import { FaBars, FaCaretDown, FaTimes } from "react-icons/fa";
 import Heading from "./Heading";
-import { eventServices } from "../utils/data";
+import { eventServices } from "../data/data";
 import { useSelector } from "react-redux";
 import { RootState } from "@/redux/store/store";
 
@@ -40,7 +40,7 @@ const Navbar = () => {
 
   return (
     <nav className="sticky top-0 bg-purple-300 z-10 ">
-      <div className="flex justify-between items-center relative bg-purple-300 py-4 px-10 z-20">
+      <div className="flex justify-between items-center relative bg-purple-300 py-4 px-10 z-50">
         <Heading>
           <Link href="/">Wed-App</Link>
         </Heading>

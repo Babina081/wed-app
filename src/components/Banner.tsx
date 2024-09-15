@@ -1,7 +1,7 @@
 "use client";
 import React, { useState } from "react";
 import Heading from "./Heading";
-import { eventCompanies } from "@/utils/data";
+import { eventCompanies } from "@/data/data";
 import Button from "./Button";
 import { useRouter } from "next/navigation";
 
