@@ -1,6 +1,7 @@
 "use client";
 import { useState } from "react";
 import { SubmitHandler, useForm } from "react-hook-form";
+import toast from "react-hot-toast";
 import { ImCancelCircle } from "react-icons/im";
 import Button from "./Button";
 import Heading from "./Heading";
@@ -25,14 +26,13 @@ export const RegisterModal = ({ onClose }: { onClose: () => void }) => {
   // Handle form submission
   const onSubmit: SubmitHandler<FormData> = (data) => {
     console.log(data); // Replace this with your form submission logic
+    toast.success("Thank you for registering!");
     onClose();
   };
   return (
     <div className="fixed inset-0 flex items-center justify-center bg-gray-900 bg-opacity-50 z-50">
       <div className="bg-white p-6 rounded-lg shadow-lg max-w-lg w-full relative">
-        <h2 className="text-xl  mb-4 text-center">
-          Register With Us
-        </h2>
+        <h2 className="text-xl  mb-4 text-center">Register With Us</h2>
         <button
           className="absolute top-4 right-4 text-gray-600 hover:text-gray-900 flex items-center justify-center"
           onClick={onClose}
@@ -58,9 +58,7 @@ export const RegisterModal = ({ onClose }: { onClose: () => void }) => {
             )}
           </div>
           <div className="mb-4">
-            <label className="block text-sm  mb-1 text-left">
-              Your Name*
-            </label>
+            <label className="block text-sm  mb-1 text-left">Your Name*</label>
             <input
               type="text"
               {...register("yourName", { required: "Your name is required" })}
@@ -79,11 +77,11 @@ export const RegisterModal = ({ onClose }: { onClose: () => void }) => {
             <input
               type="email"
               {...register("email", {
+                required: "Email is required",
                 pattern: {
-                  value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i,
+                  value: /^[^\s@]+@[^\s@]+\.[^\s@]+$/,
                   message: "Invalid email address",
                 },
-                required: "Email is required",
               })}
               className="border border-gray-300 p-2 w-full rounded-lg"
             />
@@ -104,9 +102,7 @@ export const RegisterModal = ({ onClose }: { onClose: () => void }) => {
             />
           </div>
           <div className="mb-4">
-            <label className="block text-sm  mb-1 text-left">
-              Details*
-            </label>
+            <label className="block text-sm  mb-1 text-left">Details*</label>
             <textarea
               {...register("details", { required: "Details are required" })}
               rows={4}

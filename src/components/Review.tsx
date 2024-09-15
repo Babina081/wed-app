@@ -1,12 +1,12 @@
 "use client";
-import React, { useState } from "react";
+import emptyImage from "@/assets/empty.svg";
+import Image from "next/image";
+import { useState } from "react";
+import toast from "react-hot-toast";
+import { FaStar } from "react-icons/fa";
 import Button from "./Button";
 import Heading from "./Heading";
 import ReviewModal, { ReviewData } from "./ReviewModal";
-import { FaStar } from "react-icons/fa";
-import toast from "react-hot-toast";
-import Image from "next/image";
-import emptyImage from "@/assets/empty.svg";
 
 // Define the shape of each review
 interface Review {
@@ -17,6 +17,7 @@ interface Review {
 
 // Define the shape of the company prop
 interface Company {
+  name: string;
   reviews: Review[];
 }
 
@@ -87,6 +88,7 @@ const Review = ({ company }: ReviewProps) => {
         isOpen={isModalOpen}
         onClose={handleCloseModal}
         onSubmit={handleSubmitReview}
+        companyName={company.name}
       />
     </div>
   );

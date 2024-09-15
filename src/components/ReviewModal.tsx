@@ -15,10 +15,16 @@ interface ReviewModalProps {
   isOpen: boolean;
   onClose: () => void;
   onSubmit: (data: ReviewData) => void; // Use the ReviewData type here
+  companyName: string;
 }
 
 // ReviewModal Component
-const ReviewModal = ({ isOpen, onClose, onSubmit }: ReviewModalProps) => {
+const ReviewModal = ({
+  isOpen,
+  onClose,
+  onSubmit,
+  companyName,
+}: ReviewModalProps) => {
   const {
     register,
     handleSubmit,
@@ -43,7 +49,7 @@ const ReviewModal = ({ isOpen, onClose, onSubmit }: ReviewModalProps) => {
     <div className="fixed inset-0 bg-gray-900 bg-opacity-50 z-50 flex justify-center items-center">
       <div className="bg-white rounded-lg p-6 max-w-lg w-full relative">
         <h2 className="text-xl font-semibold mb-4 text-center">
-          Write a Review for Fotomoon
+          Write a Review for {companyName}
         </h2>
         <button
           className="absolute top-7 right-7 text-gray-600 hover:text-gray-900 flex items-center justify-center"
