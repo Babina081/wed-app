@@ -25,8 +25,10 @@ const AboutPage = () => {
   return (
     <section className="flex flex-col py-10 px-10 items-center justify-center  bg-gradient-to-t from-purple-200 to-white gap-10 sm:gap-0">
       <Heading>AboutPage</Heading>
-
-      <div className="flex flex-col md:flex-row   gap-4 w-full mb-8 group h-[80vh] items-center justify-center">
+      <p className="text-2xl text-gray-600 cookie-regular">
+        Dive deep to get to know about us more closely. 
+      </p>
+      <div className="flex flex-col md:flex-row   gap-4 w-full mb-8  items-center justify-center sm:my-20">
         <div className="w-full md:w-1/2 ">
           <p className="text-gray-600 amiko-regular ">
             With a mission to help our users find the best vendor and service
@@ -49,11 +51,11 @@ const AboutPage = () => {
         <Image
           src={wed1}
           alt="wed1"
-          className="object-cover rounded-xl border border-black/10 w-full md:w-1/2 order-2 md:order-1 h-[50vh]"
+          className="object-cover rounded-xl border border-black/10 w-full md:w-1/2 order-2 md:order-1 my20"
           data-aos="zoom-in-left"
         ></Image>
       </div>
-      <div className="flex flex-col md:flex-row gap-4 w-full h-[80vh]  items-center justify-center">
+      <div className="flex flex-col md:flex-row gap-4 w-full items-center justify-center">
         <Image
           src={wed2}
           alt="wed2"

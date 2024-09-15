@@ -69,7 +69,7 @@ const Categories = () => {
                 />
 
                 {imageLoaded[category.name] && !loading && (
-                  <span className="absolute bottom-2 right-2 sm:bottom-5  sm:right-5 text-gray-900 rounded-r-lg font-bold text-sm md:text-lg drop-shadow-lg amiko-bold">
+                  <span className="absolute bottom-2 right-2 sm:bottom-5  sm:right-5 text-gray-900 rounded-r-lg font-bold text-sm md:text-lg drop-shadow-lg amiko-bold text-wrap">
                     {category.name}
                   </span>
                 )}
