@@ -23,7 +23,7 @@ const AboutPage = () => {
   }, []);
 
   return (
-    <section className="flex flex-col py-10 px-10 items-center justify-center gap-4 bg-gradient-to-t from-purple-200 to-white">
+    <section className="flex flex-col py-10 px-10 items-center justify-center  bg-gradient-to-t from-purple-200 to-white gap-10 sm:gap-0">
       <Heading>AboutPage</Heading>
 
       <div className="flex flex-col md:flex-row   gap-4 w-full mb-8 group h-[80vh] items-center justify-center">
