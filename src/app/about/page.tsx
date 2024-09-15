@@ -1,14 +1,12 @@
 "use client";
+import wed1 from "@/assets/wed1.jpg";
+import wed2 from "@/assets/wed2.jpeg";
 import Button from "@/components/Button";
 import { RegisterModal } from "@/components/ContactBanner";
 import Heading from "@/components/Heading";
 import Image from "next/image";
 import Link from "next/link";
-import React, { useEffect, useState } from "react";
-import emptyImage from "@/assets/empty.svg";
-import wed1 from "@/assets/wed1.jpg";
-import wed2 from "@/assets/wed2.jpeg";
-import wed3 from "@/assets/wed3.jpeg";
+import { useEffect, useState } from "react";
 // aos
 import AOS from "aos";
 import "aos/dist/aos.css";
@@ -27,7 +25,7 @@ const AboutPage = () => {
   return (
     <section className="flex flex-col py-10 px-10 items-center justify-center gap-4 bg-gradient-to-t from-purple-200 to-white">
       <Heading>AboutPage</Heading>
-    
+
       <div className="flex flex-col md:flex-row   gap-4 w-full mb-8 group h-[80vh] items-center justify-center">
         <div className="w-full md:w-1/2 ">
           <p className="text-gray-600 amiko-regular ">

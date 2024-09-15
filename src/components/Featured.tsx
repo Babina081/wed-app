@@ -7,7 +7,7 @@ const Featured = () => {
   return (
     <section
       className=" py-10
- px-10 flex items-center justify-center flex-col h-screen"
+ px-10 flex items-center justify-center flex-col "
     >
       <Heading>Featured</Heading>
       <div className="grid sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-4 w-full mt-4">

@@ -81,14 +81,14 @@ export const InfiniteMovingCards = ({
       <ul
         ref={scrollerRef}
         className={cn(
-          " flex min-w-full shrink-0 gap-4 py-4 w-max flex-nowrap",
+          " flex min-w-full shrink-0 gap-4 py-4 w-max flex-nowrap bg-red-400",
           start && "animate-scroll ",
           pauseOnHover && "hover:[animation-play-state:paused]"
         )}
       >
-        {items.map((item, idx) => (
+        {items.map((item) => (
           <li
-            className="w-[350px] max-w-full relative rounded-2xl border border-b-0 flex-shrink-0 border-black/10 px-8 py-6 md:w-[450px] h-[50vh] flex flex-col justify-between shadow-lg"
+            className="w-[80vw] md:w-[350px] lg:w-[450px] max-w-full relative rounded-2xl border border-b-0 flex-shrink-0 border-black/10 px-8 py-6  h-[40vh] md:h-[50vh] flex flex-col justify-between shadow-lg"
             style={{
               background: "linear-gradient(180deg, #e0b3ff, #d1a3ff)",
             }}
@@ -106,13 +106,6 @@ export const InfiniteMovingCards = ({
                 aria-hidden="true"
                 className="user-select-none -z-1 pointer-events-none absolute -left-0.5 -top-0.5 h-[calc(100%_+_4px)] w-[calc(100%_+_4px)]"
               ></div>
-              {/* <div className="items-center justify-center flex mb-4  ">
-                <img
-                  src={item.image}
-                  alt={item.clientName}
-                  className="size-28 rounded-full mr-3 border border-black/10 "
-                />
-              </div> */}
               <span className=" relative z-20 text-sm leading-[1.6] text-gray-600 font-normal amiko-regular">
                 {item.testimonial}
               </span>
