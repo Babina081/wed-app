@@ -1,12 +1,11 @@
 "use client";
+import { RootState } from "@/redux/store/store";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import React, { useState } from "react";
+import { useState } from "react";
 import { FaBars, FaCaretDown, FaTimes } from "react-icons/fa";
-import Heading from "./Heading";
-import { eventServices } from "../data/data";
 import { useSelector } from "react-redux";
-import { RootState } from "@/redux/store/store";
+import { eventServices } from "../data/data";
 
 const Navbar = () => {
   const pathname = usePathname();
@@ -39,11 +38,15 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="sticky top-0 bg-purple-300 z-10 ">
+    <nav className="sticky top-0 bg-purple-300 z-50 ">
       <div className="flex justify-between items-center relative bg-purple-300 py-4 px-10 z-50">
-        <Heading>
-          <Link href="/">Wed-App</Link>
-        </Heading>
+        <Link
+          href="/"
+          className=" border-none py-1 px-2 rounded-xl bg-gradient-to-b from-purple-400 to-white  tracking-tighter uppercase cookie-regular shadow-md font-extrabold text-4xl text-purple-700  "
+        >
+          Wed App
+        </Link>
+
         <div
           className="cursor-pointer md:hidden border border-black text-black rounded-lg p-2 hover:text-white hover:border-white transition-all duration-300 ease-in-out"
           onClick={toggleMenu}
@@ -52,7 +55,7 @@ const Navbar = () => {
         </div>
         {isOpen && (
           <ul
-            className=" absolute top-16 left-0 right-0  flex md:hidden flex-col gap-4 bg-purple-300 z-20 px-10 pb-4 amiko-bold 
+            className=" absolute top-20 left-0 right-0  flex md:hidden flex-col  gap-4 bg-purple-300 z-20 px-10 pb-4 amiko-bold 
           "
           >
             <li>
@@ -136,6 +139,15 @@ const Navbar = () => {
                 Blogs
               </Link>
             </li>
+            <li>
+              <Link
+                href="/signup"
+                passHref
+                className={`hover:opacity-25 underline-offset-4 transition-all duration-300 ease-in-out bg-green-500 text-white tracking-tighter p-2 rounded-xl shadow-md `}
+              >
+                Create an Account
+              </Link>
+            </li>
           </ul>
         )}
         <ul className="hidden md:flex flex-row gap-4 bg-purple-300 justify-center items-center amiko-bold">
@@ -208,6 +220,15 @@ const Navbar = () => {
               )} hover:underline underline-offset-4 transition-all duration-300 ease-in-out`}
             >
               Blogs
+            </Link>
+          </li>
+          <li>
+            <Link
+              href="/signup"
+              passHref
+              className={`hover:opacity-25 underline-offset-4 transition-all duration-300 ease-in-out bg-green-400 text-white tracking-tighter p-2 rounded-xl shadow-md `}
+            >
+              Create an Account
             </Link>
           </li>
         </ul>
