@@ -5,6 +5,7 @@ interface ButtonProps {
   onClick?: () => void; // onClick is optional
   color?: "red" | "blue" | "green" | "yellow" | "white";
   disabled?: boolean; // Add disabled prop
+  className?: string;
 }
 
 const Button = ({
@@ -12,6 +13,7 @@ const Button = ({
   onClick,
   color = "red",
   disabled = false,
+  className = "",
 }: ButtonProps) => {
   // Define color classes based on the color prop
   const colorClasses = {
@@ -28,7 +30,7 @@ const Button = ({
       onClick={disabled ? undefined : onClick}
       className={`${colorClasses[color]} ${
         disabled ? disabledClasses : ""
-      } font-bold py-2 px-10 rounded-lg transition-all duration-300 ease-in-out sintony-bold   `}
+      } font-bold py-2 px-10 rounded-lg transition-all duration-300 ease-in-out ${className}`} // Append custom className here
       disabled={disabled}
     >
       {children}
