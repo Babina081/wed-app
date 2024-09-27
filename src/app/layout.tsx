@@ -1,10 +1,7 @@
 import type { Metadata } from "next";
-import "./globals.css";
-import Navbar from "@/components/Navbar";
-import Footer from "@/components/Footer";
-import StoreProvider from "./StoreProvider";
 import { Toaster } from "react-hot-toast";
-
+import "./globals.css";
+import StoreProvider from "./StoreProvider";
 
 export const metadata: Metadata = {
   title: "Wed-App",
@@ -22,10 +19,8 @@ export default function RootLayout({
         className={` antialiased min-h-screen flex flex-col justify-between`}
       >
         <StoreProvider>
-          <Navbar></Navbar>
           <main className="">{children}</main>
           <Toaster></Toaster>
-          <Footer></Footer>
         </StoreProvider>
       </body>
     </html>
