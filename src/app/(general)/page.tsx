@@ -1,5 +1,6 @@
 import Banner from "@/components/Banner";
 import Categories from "@/components/Categories";
+import ClientCount from "@/components/ClientCount";
 import ContactBanner from "@/components/ContactBanner";
 import Featured from "@/components/Featured";
 import Spotlight from "@/components/Spotlight";
@@ -13,6 +14,7 @@ export default function Home() {
       <Spotlight></Spotlight>
       <Featured></Featured>
       <Testimonials></Testimonials>
+      <ClientCount></ClientCount>
       <ContactBanner></ContactBanner>
     </>
   );
