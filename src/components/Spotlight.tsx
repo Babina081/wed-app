@@ -18,12 +18,14 @@ const Spotlight = () => {
    px-10 flex items-center justify-center flex-col bg-purple-100/40 "
     >
       <Heading>In the Spotlight</Heading>
-      <div className="grid sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-4 w-full mt-4">
-        {spotlightServices.map((spotlight) => (
+      <div className="grid sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-8 w-full mt-4 ">
+        {spotlightServices.map((spotlight, index) => (
           <Link
             href={`/services/${spotlight.category}/${spotlight.name}`}
             key={spotlight.name}
-            className="border p-3 rounded-lg gap-2 flex items-center  flex-col hover:bg-slate-500/15  transition-all duration-300 ease-in-out cursor-pointer "
+            className={`border p-3 rounded-lg gap-2 flex items-center flex-col hover:bg-slate-500/15 transition-all duration-300 ease-in-out cursor-pointer ${
+              index % 2 !== 0 ? "xl:mb-20" : "xl:mt-20"
+            }`}
           >
             {loading ? (
               <LoadingSpinner />
@@ -46,11 +48,11 @@ const Spotlight = () => {
                 <p className="text-sm text-gray-600 amiko-regular">
                   {spotlight.location}
                 </p>
-                <ul className="w-full grid  grid-cols-2 gap-2 amiko-regular">
+                <ul className="w-full grid  grid-cols-2 gap-2 amiko-regular ">
                   {spotlight.tags.map((tag) => (
                     <li
                       key={tag.label}
-                      className="flex flex-col items-center justify-start border rounded-lg p-2 text-center gap-1"
+                      className="flex flex-col items-center justify-start border rounded-lg p-2 text-center gap-1 "
                     >
                       <tag.icon className="inline-block mr-2 h-5 w-5" />
                       <div className="text-xs">{tag.label}</div>
