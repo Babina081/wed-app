@@ -83,7 +83,7 @@ const Banner = () => {
         alt="img1"
         className="size-28 absolute bottom-0 right-0 object-cover rotate-180 "
       ></Image>
-      <div className="z-10">
+      <div className="z-10 flex items-center flex-col justify-center">
         <Heading> Lets find a team for your events and celebrations</Heading>
         <p className="text-2xl text-gray-600 cookie-regular">
           Discover the best photographers, videographers, boutiques, make-up
