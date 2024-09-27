@@ -56,7 +56,7 @@ const Categories = () => {
               <Link
                 href={`/services/${category.name}`}
                 key={category.name}
-                className="border rounded-lg gap-2 flex items-center flex-col hover:bg-slate-500/15  transition-all duration-300 ease-in-out cursor-pointer relative shadow-xl border-black/10 hover:scale-110  "
+                className="border rounded-lg gap-2 flex items-center flex-col hover:bg-slate-500/15  transition-all duration-300 ease-in-out cursor-pointer relative shadow-xl border-black/10 hover:scale-110  overflow-hidden"
               >
                 <img
                   src={category.imageUrl}
@@ -69,10 +69,11 @@ const Categories = () => {
                 />
 
                 {imageLoaded[category.name] && !loading && (
-                  <span className="absolute bottom-2 right-2 sm:bottom-5  sm:right-5 text-gray-900 rounded-r-lg font-bold text-sm md:text-lg drop-shadow-lg amiko-bold text-wrap">
+                  <span className="absolute bottom-2 right-2 sm:bottom-5  sm:right-5  rounded-r-lg font-bold text-sm md:text-lg drop-shadow-lg amiko-bold text-wrap text-white z-10 uppercase">
                     {category.name}
                   </span>
                 )}
+                <div className="absolute inset-0 bg-black opacity-40 " />
               </Link>
             ))}
           </>
