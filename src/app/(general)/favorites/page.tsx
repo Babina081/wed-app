@@ -1,14 +1,14 @@
 "use client";
-import Button from "@/components/Button";
+import emptyImage from "@/assets/empty.svg";
 import Heading from "@/components/Heading";
 import { remove, selectFavorites } from "@/redux/features/favoriteSlice";
 import { RootState } from "@/redux/store/store";
-import { useRouter } from "next/navigation";
-import React from "react";
-import toast from "react-hot-toast";
-import { useDispatch, useSelector } from "react-redux";
-import emptyImage from "@/assets/empty.svg";
 import Image from "next/image";
+import { useRouter } from "next/navigation";
+import toast from "react-hot-toast";
+import { FaEye } from "react-icons/fa";
+import { IoTrashBin } from "react-icons/io5";
+import { useDispatch, useSelector } from "react-redux";
 
 const FavoritePage = () => {
   const router = useRouter();
@@ -48,20 +48,23 @@ const FavoritePage = () => {
                 {favorite.location}
               </p>
               {/* Replace with actual data if available */}
-              <div className="flex gap-2 justify-center items-center w-full mt-2">
-                <Button
-                  color="green"
+              <div className="flex gap-2  w-full mt-2 items-end justify-end">
+                <button
+                  className=" border border-green-400 p-1 rounded-lg hover:opacity-45 transition-all duration-300 ease-in-out"
                   onClick={() => {
                     router.push(
                       `/services/${favorite.service}/${favorite.name}`
                     );
                   }}
                 >
-                  View
-                </Button>
-                <Button onClick={() => handleRemove(favorite.name)}>
-                  Remove
-                </Button>
+                  <FaEye className="size-5 text-green-300" />
+                </button>
+                <button
+                  onClick={() => handleRemove(favorite.name)}
+                  className=" border p-1 rounded-lg border-red-400 hover:opacity-45 transition-all duration-300 ease-in-out"
+                >
+                  <IoTrashBin className="size-5 text-red-400" />
+                </button>
               </div>
             </li>
           ))
