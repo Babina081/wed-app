@@ -41,8 +41,8 @@ const Categories = () => {
 
   return (
     <section
-      className=" py-10
-   px-10 flex items-center justify-center flex-col"
+      className=" py-40
+   px-10 flex items-center justify-center flex-col "
     >
       <Heading>Categories</Heading>
       <div className="grid grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-4 w-full mt-4">

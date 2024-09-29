@@ -2,12 +2,13 @@ import React from "react";
 import Heading from "./Heading";
 import { eventCompanies } from "@/data/data";
 import Link from "next/link";
+import Image from "next/image";
 
 const Featured = () => {
   return (
     <section
       className=" py-10
- px-10 flex items-center justify-center flex-col "
+ px-10 flex items-center justify-center flex-col h-screen"
     >
       <Heading>Featured</Heading>
       <div className="grid sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-4 w-full mt-4">
@@ -25,7 +26,9 @@ const Featured = () => {
                   Featured
                 </div>
               )}
-              <img
+              <Image
+                width={200}
+                height={200}
                 src="https://picsum.photos/200"
                 alt={company.name}
                 className="w-full h-full object-cover rounded-lg"

@@ -42,7 +42,7 @@ const Banner = () => {
 
   return (
     <section
-      className="bg-gradient-to-b from-purple-200 to-white min-h-[60vh] py-4
+      className="bg-gradient-to-b from-purple-200 to-white min-h-[70vh] py-4
    px-10 flex flex-col items-center justify-center text-center relative"
     >
       <Image

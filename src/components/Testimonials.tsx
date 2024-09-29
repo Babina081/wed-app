@@ -10,7 +10,7 @@ const Testimonials = () => {
 px-10 flex items-center justify-center flex-col h-screen"
     >
       <Heading>Testimonials</Heading>
-      <p className="text-2xl text-gray-600 cookie-regular">
+      <p className="text-2xl text-gray-600 cookie-regular pb-5">
         Hear from our happy clients
       </p>
       {/* <div className=" rounded-md flex flex-col antialiased  items-center justify-center relative overflow-hidden"> */}

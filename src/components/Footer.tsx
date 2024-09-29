@@ -107,7 +107,7 @@ const Footer = () => {
           {socialMediaLinks.map((social) => (
             <li
               key={social.platform}
-              className="border p-2 rounded-lg border-gray-700 hover:border-gray-900"
+              className="border p-2 rounded-lg border-gray-700  group group-hover:border-purple-400 group-hover:text-purple-400 transition-colors duration-300 ease-in-out"
             >
               <a
                 href={social.url}
@@ -115,10 +115,7 @@ const Footer = () => {
                 rel="noopener noreferrer"
                 aria-label={social.platform}
               >
-                <social.icon
-                  className="text-gray-700 hover:text-gray-900 transition-colors duration-300"
-                  size={24}
-                />
+                <social.icon className="text-gray-700 " size={24} />
               </a>
             </li>
           ))}
