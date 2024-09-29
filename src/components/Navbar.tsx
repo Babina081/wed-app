@@ -42,7 +42,7 @@ const Navbar = () => {
       <div className="flex justify-between items-center relative bg-purple-300 py-4 px-10 z-50">
         <Link
           href="/"
-          className=" border-none py-1 px-2 rounded-xl bg-gradient-to-b from-purple-400 to-white  tracking-tighter uppercase cookie-regular shadow-md font-extrabold text-4xl text-purple-700  "
+          className="  py-1 px-2 rounded-xl   tracking-tighter uppercase cookie-regular font-extrabold text-4xl text-purple-700  "
         >
           Wed App
         </Link>
