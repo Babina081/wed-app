@@ -47,8 +47,8 @@ const Footer = () => {
               Wed App
             </Link>
             <p className="text-sm amiko-regular tracking-tighter mt-4">
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maxime,
-              tenetur?
+              WedApp® is an easy-to-use wedding app for managing wedding
+              planning tasks, payments and vendors.
             </p>
           </div>
           <div className=" flex flex-col items-center xl:items-start text-center xl:text-left">

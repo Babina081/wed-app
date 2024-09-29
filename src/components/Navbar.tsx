@@ -206,7 +206,7 @@ const Navbar = () => {
                 Favorites
               </span>
               {favoriteCount > 0 && (
-                <span className="px-2 py-1 bg-yellow-200 rounded-full ml-2 hover:no-underline">
+                <span className="px-2 py-1 bg-purple-500 text-white rounded-full ml-1 hover:no-underline">
                   {favoriteCount}
                 </span>
               )}
