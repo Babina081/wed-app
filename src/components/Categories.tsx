@@ -3,6 +3,7 @@ import { eventServices } from "@/data/data";
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import Heading from "./Heading";
+import Image from "next/image";
 
 // Define the type for the event services (assuming it has name and imageUrl)
 interface EventService {
@@ -12,7 +13,7 @@ interface EventService {
 
 const SkeletonCard = () => {
   return (
-    <div className="border rounded-lg flex items-center flex-col animate-pulse bg-gray-200 h-48 w-full relative shadow-xl border-black/10">
+    <div className="border rounded-lg flex items-center flex-col animate-pulse bg-gray-200 h-96 w-full relative shadow-xl border-black/10">
       <div className="w-full h-full object-cover rounded-lg bg-gray-300"></div>
       <span className="absolute bottom-5 right-5 bg-gray-300 w-24 h-6 rounded-md"></span>
     </div>
@@ -58,12 +59,14 @@ const Categories = () => {
                 key={category.name}
                 className="border rounded-lg gap-2 flex items-center flex-col hover:bg-slate-500/15  transition-all duration-300 ease-in-out cursor-pointer relative shadow-xl border-black/10 hover:scale-110  overflow-hidden"
               >
-                <img
+                <Image
                   src={category.imageUrl}
                   alt={category.name}
                   className={`w-full h-full object-cover rounded-lg bgCat ${
                     imageLoaded[category.name] ? "visible" : "invisible"
                   }`}
+                  width={50}
+                  height={50}
                   onLoad={() => handleImageLoad(category.name)}
                   style={{ transitionDelay: "0.2s" }}
                 />

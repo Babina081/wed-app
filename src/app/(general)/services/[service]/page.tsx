@@ -1,6 +1,7 @@
 "use client";
 import Heading from "@/components/Heading";
 import { eventCompanies } from "@/data/data";
+import Image from "next/image";
 import Link from "next/link";
 import { useParams } from "next/navigation";
 import React, { useState } from "react";
@@ -84,7 +85,9 @@ const ServicePage = () => {
                   Featured
                 </div>
               )}
-              <img
+              <Image
+                height={200}
+                width={200}
                 src="https://picsum.photos/200"
                 alt={company.name}
                 className={`w-full h-full object-cover rounded-lg `}

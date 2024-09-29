@@ -96,7 +96,9 @@ const LocationPage = () => {
                   Featured
                 </div>
               )}
-              <img
+              <Image
+                height={200}
+                width={200}
                 src="https://picsum.photos/200"
                 alt={company.name}
                 className={`w-full h-full object-cover rounded-lg `}

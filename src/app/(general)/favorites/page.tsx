@@ -33,7 +33,9 @@ const FavoritePage = () => {
               key={index}
               className="flex flex-col items-start justify-center border border-black rounded-lg p-2 gap-1"
             >
-              <img
+              <Image
+                height={200}
+                width={200}
                 src="https://picsum.photos/200/200"
                 alt={favorite.name} // Placeholder image, replace with actual image source if available
                 className="rounded-lg w-full object-cover"

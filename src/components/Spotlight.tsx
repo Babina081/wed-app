@@ -1,8 +1,8 @@
 "use client";
-import React, { useEffect, useState } from "react";
-import Heading from "./Heading";
 import { spotlightServices } from "@/data/data";
 import Link from "next/link";
+import { useEffect, useState } from "react";
+import Heading from "./Heading";
 import LoadingSpinner from "./LoadingSpinner";
 
 const Spotlight = () => {
