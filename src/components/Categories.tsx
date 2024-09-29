@@ -61,7 +61,7 @@ const Categories = () => {
               >
                 <Image
                   src={category.imageUrl}
-                  alt={category.name}
+                  alt={`Image representing ${category.name} service`}
                   className={`w-full h-full object-cover rounded-lg bgCat ${
                     imageLoaded[category.name] ? "visible" : "invisible"
                   }`}
