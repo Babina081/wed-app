@@ -9,7 +9,7 @@ const AuthLayout = ({ children }: { children: React.ReactNode }) => {
     <main className="flex h-screen items-center justify-center p-5 bg-gradient-to-br from-purple-200 to-white">
       <div className="flex h-full max-h-[40rem] w-full max-w-[64rem] overflow-hidden rounded-2xl bg-card shadow-2xl relative bg-white">
         {
-          <div className="w-full space-y-10 overflow-y-auto p-10 md:w-1/2 relative ">
+          <div className="w-full space-y-10 overflow-y-auto p-10 md:w-1/2 relative">
             {children}
           </div>
         }
@@ -27,7 +27,7 @@ const AuthLayout = ({ children }: { children: React.ReactNode }) => {
             Creating Happiness!
           </h2>
         </div>
-        <Link href="/" passHref className="absolute top-3 right-3 ">
+        <Link href="/" className="absolute top-3 right-3 ">
           <MdOutlineCancel className="size-8 text-gray-500 md:text-white  hover:text-red-400 cursor-pointer transition-all duration-300 ease-in-out " />
         </Link>
       </div>
