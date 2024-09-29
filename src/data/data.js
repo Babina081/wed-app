@@ -578,3 +578,42 @@ export const testimonials = [
     image: "https://picsum.photos/200?random=6",
   },
 ];
+
+export const blogs = [
+  {
+    imageUrl: "https://picsum.photos/201",
+    altText: "hairstyle",
+    title: "Trending Hair Colors for 2024",
+    description:
+      "Discover the latest trends in hair colors for this year! From bold reds to subtle pastels, find out what shades are in style...",
+    publishedDate: "2024-01-15",
+    likeCount: 0,
+  },
+  {
+    imageUrl: "https://picsum.photos/202",
+    altText: "bob hairstyle",
+    title: "The Classic Bob: A Timeless Choice",
+    description:
+      "The bob hairstyle is a classic that never goes out of style. Learn how to choose the right bob for your face shape...",
+    publishedDate: "2024-02-05",
+    likeCount: 0,
+  },
+  {
+    imageUrl: "https://picsum.photos/203",
+    altText: "wavy hairstyle",
+    title: "Embracing Your Natural Waves",
+    description:
+      "Learn how to enhance and embrace your natural waves with these expert tips and product recommendations...",
+    publishedDate: "2024-03-10",
+    likeCount: 0,
+  },
+  {
+    imageUrl: "https://picsum.photos/204",
+    altText: "braided hairstyle",
+    title: "Creative Braids for Every Occasion",
+    description:
+      "From casual outings to formal events, discover creative braiding techniques that will elevate your look...",
+    publishedDate: "2024-04-20",
+    likeCount: 0,
+  },
+];
