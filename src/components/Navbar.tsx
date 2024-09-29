@@ -122,7 +122,7 @@ const Navbar = () => {
                   Favorites
                 </span>
                 {favoriteCount > 0 && (
-                  <span className="px-2 py-1 bg-yellow-200 rounded-full ml-2 hover:no-underline">
+                  <span className="px-2 py-1 bg-purple-500 text-white rounded-full ml-2 hover:no-underline">
                     {favoriteCount}
                   </span>
                 )}
@@ -142,7 +142,6 @@ const Navbar = () => {
             <li>
               <Link
                 href="/signup"
-                passHref
                 className={`hover:opacity-25 underline-offset-4 transition-all duration-300 ease-in-out bg-green-500 text-white tracking-tighter p-2 rounded-xl shadow-md `}
               >
                 Create an Account
@@ -202,7 +201,7 @@ const Navbar = () => {
           </li>
           <li>
             <Link href="/favorites" className={`${isActive("/favorites")}`}>
-              <span className=" hover:underline underline-offset-4 transition-all duration-300 ease-in-out">
+              <span className="hover:underline underline-offset-4 transition-all duration-300 ease-in-out">
                 Favorites
               </span>
               {favoriteCount > 0 && (
@@ -225,8 +224,7 @@ const Navbar = () => {
           <li>
             <Link
               href="/signup"
-              passHref
-              className={`hover:opacity-25 underline-offset-4 transition-all duration-300 ease-in-out bg-green-400 text-white tracking-tighter p-2 rounded-xl shadow-md `}
+              className={`hover:opacity-25 underline-offset-4 transition-all duration-300 ease-in-out bg-green-400 text-white tracking-tighter p-2 rounded-xl shadow-md`}
             >
               Create an Account
             </Link>
