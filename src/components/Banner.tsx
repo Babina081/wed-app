@@ -91,7 +91,11 @@ const Banner = () => {
         </p>
         {/* Search bar */}
         <div className="mt-4 flex flex-col md:flex-row gap-2 amiko-semibold">
+          <label htmlFor="categorySelect" className="sr-only">
+            Select a category:
+          </label>
           <select
+            id="categorySelect"
             value={selectedCategory}
             onChange={(e) => setSelectedCategory(e.target.value)}
             className="border p-2  rounded-lg  border-black/10 shadow-sm  "
@@ -102,7 +106,11 @@ const Banner = () => {
               </option>
             ))}
           </select>
+          <label htmlFor="locationSelect" className="sr-only">
+            Select a location:
+          </label>
           <select
+            id="locationSelect"
             value={selectedLocation}
             onChange={(e) => setSelectedLocation(e.target.value)}
             className="border p-2 rounded-lg border-black/10 shadow-sm "
