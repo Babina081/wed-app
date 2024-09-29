@@ -45,7 +45,7 @@ const AboutPage = () => {
           </p>
         </div>
       </div>
-      <div className=" mt-[50vh] z-30 w-full bg-white">
+      <div className=" mt-[50vh] z-30 w-full bg-white pb-10">
         <div className="flex flex-col md:flex-row   gap-4 w-full mb-8  items-center justify-center sm:my-20  bg-white  py-10 sm:py-0 px-10">
           <div className="w-full md:w-1/2 ">
             <p className="text-gray-600 amiko-regular ">
