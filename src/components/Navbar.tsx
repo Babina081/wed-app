@@ -141,6 +141,17 @@ const Navbar = () => {
             </li>
             <li>
               <Link
+                href="/e-Invites"
+                className={`${isActive(
+                  "/e-Invites"
+                )} hover:underline underline-offset-4 transition-all duration-300 ease-in-out`}
+                onClick={closeMenu}
+              >
+                E-Invites
+              </Link>
+            </li>
+            <li>
+              <Link
                 href="/signup"
                 className={`hover:opacity-25 underline-offset-4 transition-all duration-300 ease-in-out bg-green-500 text-white tracking-tighter p-2 rounded-xl shadow-md `}
               >
@@ -219,6 +230,16 @@ const Navbar = () => {
               )} hover:underline underline-offset-4 transition-all duration-300 ease-in-out`}
             >
               Blogs
+            </Link>
+          </li>
+          <li>
+            <Link
+              href="/e-Invites"
+              className={`${isActive(
+                "/e-Invites"
+              )} hover:underline underline-offset-4 transition-all duration-300 ease-in-out`}
+            >
+              E-Invites
             </Link>
           </li>
           <li>
