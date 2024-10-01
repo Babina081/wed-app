@@ -141,9 +141,9 @@ const Navbar = () => {
             </li>
             <li>
               <Link
-                href="/e-Invites"
+                href="/e-invites"
                 className={`${isActive(
-                  "/e-Invites"
+                  "/e-invites"
                 )} hover:underline underline-offset-4 transition-all duration-300 ease-in-out`}
                 onClick={closeMenu}
               >
@@ -211,6 +211,13 @@ const Navbar = () => {
             )}
           </li>
           <li>
+            <Link href="/gallery" className={`${isActive("/gallery")}`}>
+              <span className="hover:underline underline-offset-4 transition-all duration-300 ease-in-out">
+                Gallery
+              </span>
+            </Link>
+          </li>
+          <li>
             <Link href="/favorites" className={`${isActive("/favorites")}`}>
               <span className="hover:underline underline-offset-4 transition-all duration-300 ease-in-out">
                 Favorites
@@ -234,9 +241,9 @@ const Navbar = () => {
           </li>
           <li>
             <Link
-              href="/e-Invites"
+              href="/e-invites"
               className={`${isActive(
-                "/e-Invites"
+                "/e-invites"
               )} hover:underline underline-offset-4 transition-all duration-300 ease-in-out`}
             >
               E-Invites
