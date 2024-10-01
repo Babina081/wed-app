@@ -617,3 +617,41 @@ export const blogs = [
     likeCount: 0,
   },
 ];
+
+export const invitationCard = [
+  {
+    id: 1,
+    name: "Wedding Template",
+    image:
+      "https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/3a25ea152127129.631876281f73e.png",
+  },
+  {
+    id: 2,
+    name: "Birthday Template",
+    image: "https://content.wepik.com/statics/25813802/preview-page0.jpg",
+  },
+  {
+    id: 3,
+    name: "Anniversary Template",
+    image:
+      "https://images.greetingsisland.com/images/invitations/anniversary/previews/geometric-&-flowers_2.png?auto=format,compress&w=440&fit=crop&max-h=616",
+  },
+  {
+    id: 4,
+    name: "Corporate Template",
+    image:
+      "https://img.pikbest.com/templates/2022/11/29112309/black-gold-high-end-business-invitation-corporate-poster_516092.jpg!f305cw",
+  },
+  {
+    id: 5,
+    name: "Engagement Template",
+    image:
+      "https://suavasarinvites.com/wp-content/uploads/2024/02/engagement-invitation-08.jpeg",
+  },
+  {
+    id: 6,
+    name: "Opening Template",
+    image:
+      "https://marketplace.canva.com/EAF7Qyemld8/1/0/1135w/canva-blue-and-gold-elegant-grand-opening-invitation-gmnTKZ8EoHQ.jpg",
+  },
+];
